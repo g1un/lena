@@ -1,0 +1,19 @@
+.social
+	font-size 0
+	text-align center
+	&-item
+		display inline-block
+		vertical-align middle
+		width 44px
+		text-align center
+		margin-right 5px
+		&:last-child
+			margin-right 0
+	&-link
+		display inline-block
+		vertical-align middle
+		for val in vk fb twitter google ok
+			&.__{val}
+				sprite(val)
+			&:hover
+				opacity .5

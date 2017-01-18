@@ -1,0 +1,98 @@
+.footer
+	margin 0 auto
+	padding 45px 0 50px
+	&-up
+		margin 0 auto 85px
+		max-width 835px
+		font-size 0
+	&-menu
+		display inline-block
+		vertical-align top
+		width 33.33333%
+		border 1px solid transparent
+		padding 8px 10px 0
+		position relative
+		&:after
+			content ''
+			position absolute
+			top 0
+			right 0
+			width 1px
+			height 143px
+			background #e6e9ee
+		&:last-child
+			&:after
+				display none
+		&-text
+			font-ptsans-reg()
+			font-size 14px
+			color #434a54
+			text-align center
+	&-title
+		display block
+		font-ptserif-bold()
+		font-size 18px
+		line-height 1.2em
+		color #000
+		text-transform uppercase
+		text-decoration none
+		text-align center
+		margin-bottom 30px
+		&:hover
+			text-decoration underline
+		&.__notlink
+			&:hover
+				text-decoration none
+	&-list
+		&-item
+			margin-bottom 15px
+			&:last-child
+				margin-bottom 0
+		&-link
+			display block
+			font-ptserif-reg()
+			font-size 14px
+			text-transform uppercase
+			text-decoration none
+			text-align center
+			&:hover
+				text-decoration underline
+	&-subscribe
+		text-align center
+		font-size 0
+		margin-bottom 75px
+		&-input[type="text"]
+			display inline-block
+			vertical-align top
+			width 306px
+			border 1px solid #e6e9ee
+			padding 0 15px
+			margin-right 8px
+			margin-bottom 10px
+			placeholder(1, #aab2bd)
+			font-ptserif-reg()
+			font-size 14px
+			line-height 38px
+			color #aab2bd
+		&-submit
+			display inline-block
+			vertical-align top
+			min-width 123px
+			padding 0 10px
+			border 1px solid #afb7c1
+			background transparent
+			font-ptserif-reg()
+			font-size 14px
+			line-height 36px
+			color #434a54
+			text-transform uppercase
+			text-align center
+			&:hover
+				text-decoration underline
+
+	@media only screen and (max-width 640px)
+		&-menu
+			width 100%
+			margin-bottom 10px
+		&-title
+			margin-bottom 10px

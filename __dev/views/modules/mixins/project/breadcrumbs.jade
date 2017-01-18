@@ -1,0 +1,9 @@
+mixin breadcrumbs(breadcrumbs)
+	+namespace("breadcrumbs")
+		+el("", "ul")
+			each val, index in breadcrumbs
+				+el("item", "li")
+					if index == (breadcrumbs.length - 1)
+						|#{val}
+					else
+						+el("link", "a")(href="#")!= val

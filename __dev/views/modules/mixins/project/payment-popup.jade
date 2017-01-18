@@ -1,0 +1,16 @@
+mixin payment-popup(rows)
+	+namespace("flatcard-detail")
+		+el().__payment
+			+el("table")
+				each val, index in rows
+					if index != 'installment'
+						+el("row")
+							+el("cell").__label: span!= index
+							+el("cell").__value: span!= val
+				if rows['installment']
+					+el("row").form-item
+						+el("cell").__label.form-label
+							label Первоначальный взнос
+						+el("cell").__value
+							input(type="text", name="", value="1 890 000")
+							span руб.

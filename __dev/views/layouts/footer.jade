@@ -1,0 +1,23 @@
++namespace("footer")
+	+el("up")
+		+el("menu")
+			+el("title", "a")(href="#") Обслуживание
+			+el("list", "ul")
+				each val in ["Химчистка", "Реставрация", "Холодное хранение"]
+					+el("list-item", "li")
+						+el("list-link", "a")(href="#")!= val
+		+el("menu")
+			+el("title", "a")(href="#") Lena
+			+el("list", "ul")
+				each val in ["О компании", "Новости", "Вакансии", "Контакты"]
+					+el("list-item", "li")
+						+el("list-link", "a")(href="#")!= val
+		+el("menu")
+			+el("title", "a")(href="#") Юридическая ответственность
+			+el("menu-text", "p") Все права принадлежат<br>компании «Лена»
+	+el("subscribe", "form")(action="#", method="get")
+		+el("title", "h4").__notlink Следите за новостями Lena
+		+el("subscribe-input", "input")(type="text", name="subscribe-email", id="subscribe-email", placeholder="Укажите ваш e-mail...")
+		+el("subscribe-submit", "input")(type="submit", name="subscribe-submit", id="subscribe-submit", value="Подписаться")
+	+social()
+

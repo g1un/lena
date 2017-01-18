@@ -1,0 +1,5 @@
+mixin promo-slider()
+	div.promo-slider.js-promo-slider
+		ul.promo-slider-list
+			each val in [0,1,0]
+				li(style="background-image: url(#{ images('example/promo-slider-img-' + val + '.jpg') })").promo-slider-item

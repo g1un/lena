@@ -1,0 +1,106 @@
+.popup
+	position absolute
+	pos 0
+	size 100%
+	z-index 99999
+	display none
+	background rgba(222,222,222,.64)
+
+	&.__visible
+		&.__last
+			display block
+
+	&-box
+		position absolute
+		pos 0
+		margin auto
+		width 700px
+		max-width 95%
+		min-width 260px
+		max-height 90%
+		max-height calc(100vh - 100px)
+		padding 15px 0 27px
+		background #fff
+	&-inner
+		max-height 100%
+		//overflow auto
+		//padding 20px 40px 40px
+	&-close
+		position absolute
+		top -46px
+		right -40px
+		color #fff
+		cursor pointer
+	&-title
+		margin 0 -12px 28px
+		padding 6px 47px
+		font-open-sans-sb()
+		font-size 20px
+		color #fff
+		background linear-gradient(to top, #70b07a 32%, #98dba3)
+		position relative
+		&:before,
+		&:after
+			content ''
+			position absolute
+			bottom -12px
+			width 0
+			height 0
+			border-top 12px solid #98dba3
+		&:before
+			border-left 12px solid transparent
+			left 0
+		&:after
+			border-right 12px solid transparent
+			right 0
+
+	&-subtitle
+		margin-bottom 20px
+	&-title + &-subtitle
+		margin-top -20px
+	&-content
+		padding 0 40px
+		&,
+		p
+			font-size (14px)
+			line-height (17px)
+		p
+			margin 0 0 20px
+
+		.form-submit
+			text-align right
+	&-bottom
+		margin-top 30px
+		text-align center
+
+	&.__loading
+		cursor progress
+		.popup-inner:after
+			display block
+			content ''
+			size 48px
+			margin 40px auto
+			background images('preloader-48.gif') center no-repeat
+		.popup-inner > *
+			display none
+	+MEDIA("TABLET")
+		&-close
+			right 0
+	+MEDIA("PHONE")
+		&-box
+			max-size 100%
+			size 100%
+			min-size 0
+		&-close
+			top 25px
+			right 10px
+			background-image images('icons/popup-close__black.png')
+		&.__installment
+			.popup
+				&-content
+					margin-left -20px
+					margin-right -20px
+				&-title
+					margin-left -20px
+					margin-right -20px
+					padding 0

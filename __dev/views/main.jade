@@ -1,0 +1,11 @@
+extends layouts/_default
+
+block vars
+	-var currentPageTitle = ["Главная"]
+block content
+	+promo-slider()
+	+main-features(mainFeatures)
+	+product(product)
+	+news(news)
+	+novelties(novelties)
+	+atelier()

@@ -1,0 +1,18 @@
+.header-up
+	ul.header-up-menu.clearfix
+		li.header-lang
+			select(name="lang", id="lang").js-lang
+				option(value="0") Русский
+				option(value="1") Английский
+		li.header-contacts
+			a(href="#") Контакты
+		li.header-basket
+			a(href="#", data-basket-goods="2").header-basket-link Корзина
+		li.header-mail
+			a(href="#").header-mail-link Написать нам
+ul.header-down.clearfix
+	each val in ["Новое", "Для женщин", "Коллекции", "Для мужчин"]
+		li
+			a(href="#") #{val}
+.header-logo
+	img(src="#{ images('logo.png') }", alt="logo")

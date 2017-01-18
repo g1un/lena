@@ -1,0 +1,17 @@
+mixin main-feature(item, index)
+	li(class!=attributes.class).main-feature
+		h3!= item.title
+		div.main-feature-icon(class="#{ item.icon }")
+			span
+		ul
+			each val, index in item.features
+				li!= item.features[index]
+		div.main-feature-bottom
+			-var imgIndex = index + 1;
+			img(src="#{ images('background/main-feature-bg-' + imgIndex + '.png') }", alt="main-feature-bg-#{ imgIndex }")
+			if item.button
+				a(href="#").main-feature-btn Наши поставщики
+					span
+			else
+				a(href="#").main-feature-link Подробнее
+			span!= (item.bottomTitle ? item.bottomTitle : item.title)

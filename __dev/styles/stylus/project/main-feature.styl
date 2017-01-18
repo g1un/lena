@@ -1,0 +1,144 @@
+.main-feature
+	border 1px solid #f3e5cc
+	border-radius 3px
+	padding 27px 27px 215px
+	font-family Tahoma, Arial, sans-serif
+	font-size 15px
+	line-height 1.3em
+	color #333
+	position relative
+	min-height 655px
+	&:hover
+		background #fcf8ec
+		background linear-gradient(to right, #fcf8ec, #fffdf9 39%, #fffdf9 63%, #fcf8ec);
+		.main-feature-bottom
+			background radial-gradient(transparent 50%, rgba(237,210,166,1)) no-repeat center 40px
+	&.__system
+		.main-feature-bottom
+			background images('background/main-feature-bg-1.jpg') no-repeat center bottom
+			background-size 100% auto
+	&.__order
+		.main-feature-bottom
+			background images('background/main-feature-bg-2.jpg') no-repeat center bottom
+			background-size 100% auto
+	&.__menu
+		.main-feature-bottom
+			background images('background/main-feature-bg-3.jpg') no-repeat center bottom
+			background-size 100% auto
+	h3
+		margin-bottom 11px
+		font-family Open-Sans-SemiBold, Arial, sans-serif
+		font-size 20px
+		line-height 1.2em
+		color #000
+		font-weight 400
+		text-transform uppercase
+		text-align center
+	&-icon
+		margin-bottom 10px
+		min-height 45px
+		text-align center
+		position relative
+		span
+			display inline-block
+		for val in cutlery pad hat
+			&.__{val}
+				span
+					sprite(val+'-green')
+		&:before,
+		&:after
+			content ''
+			position absolute
+			top 50%
+			width 40%
+			height 1px
+			background #ccc
+		&:before
+			left 0
+		&:after
+			right 0
+	ul
+		margin-bottom 5px
+		li
+			padding-left 33px
+			margin-bottom 13px
+			&:last-child
+				margin-bottom 0
+			position relative
+			&:before
+				content ''
+				position absolute
+				top 5px
+				left 0
+				width 12px
+				height 7px
+				transform rotate(-45deg)
+				border-left 3px solid #ec2720
+				border-bottom 3px solid #ec2720
+	&-bottom
+		position absolute
+		bottom 0
+		left 0
+		right 0
+		padding-bottom 63.8%
+		background radial-gradient(transparent 50%, rgba(237,210,166,.7)) no-repeat center 40px
+		img
+			position absolute
+			bottom 0
+			left 0
+			right 0
+			width 100%
+		span
+			position absolute
+			bottom 14px
+			left 19px
+			font-family Open-Sans-SemiBold, Arial, sans-serif
+			font-size 20px
+			line-height 1.2em
+			color #987552
+			text-transform uppercase
+			text-shadow 0 1px 1px #fff
+	&-link
+		display block
+		position absolute
+		right 38px
+		font-family Open-Sans-SemiBold, Arial, sans-serif
+		font-size 15px
+		line-height 35px
+		color #559c61
+	&-btn
+		display block
+		position absolute
+		right 28px
+		padding 0 14px 0 25px
+		border-radius 2px
+		background #f6e9d4
+		font-family Open-Sans-SemiBold, Arial, sans-serif
+		font-size 14px
+		line-height 35px
+		color #333
+		text-transform uppercase
+		text-decoration none
+		text-shadow 1px 1px 0 #fff
+		span
+			position absolute
+			top 50%
+			left -13px
+			margin-top -12px
+			width 26px
+			height 24px
+			border-radius 50%
+			background-color #98dba3
+			&:before
+				content ''
+				position absolute
+				top 50%
+				left 50%
+				margin-top -8px
+				margin-left -9px
+				sprite(arrow-right)
+		&:hover
+			text-decoration underline
+			span
+				background-color #ec2720
+

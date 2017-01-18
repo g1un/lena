@@ -1,0 +1,14 @@
+mixin product(product)
+	.container
+		.product
+			a(href="#").product-category
+				img(src="#{ images('example/' + product.categoryImage + '.jpg') }", alt="#{product.categoryImage}")
+				div.product-category-link
+					span!= product.category
+			a(href="#").product-info
+				.product-info-wrapper
+					h3!= product.title
+					div.product-material!= product.material
+					div.product-price #{product.price} #[span v]
+				.product-image
+					img(src="#{ images('example/' + product.image + '.jpg') }", alt="#{product.image}")

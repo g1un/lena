@@ -1,0 +1,29 @@
+.breadcrumbs
+	min-height 60px
+	padding-top 20px
+	border-top 1px solid rgba(67,74,84,.2)
+	font-size 0
+	text-align center
+	&-item
+		display inline-block
+		vertical-align top
+		margin-right 11px
+		font-size 14px
+		color #aab2bd
+		position relative
+		&:after
+			content: '-'
+			position absolute
+			top 1px
+			right -8px
+		&:last-child
+			margin-right 0
+			&:after
+				display none
+	&-link
+		display block
+		color #434a54
+		text-decoration none
+		&:hover
+			text-decoration underline
+

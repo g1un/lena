@@ -1,0 +1,66 @@
+.promo-slider
+	position relative
+	margin-bottom 48px
+	&-item
+		min-height 579px
+		background-repeat no-repeat
+		background-size cover
+		background-position: center center;
+	.slick-dots
+		display table
+		max-width 1038px
+		width 100%
+		margin -30px auto 0
+		font-size 0
+		position relative
+		li
+			width 35%
+			height 113px
+			display table-cell
+			vertical-align middle
+			padding-right 5%
+			text-align center
+			position relative
+			&:last-child
+				width 30%
+				padding-right 0
+		&:before
+			content ''
+			position absolute
+			top 0
+			left 0
+			height 100%
+			width 30%
+			border 3px solid #989ba1
+			transition left .5s
+		&.__slide-0
+			li:nth-child(1)
+				.promo-slider-dot
+					color #000
+		&.__slide-1
+			&:before
+				left 35%
+			li:nth-child(2)
+				.promo-slider-dot
+					color #000
+		&.__slide-2
+			&:before
+				left 70%
+			li:nth-child(3)
+				.promo-slider-dot
+					color #000
+	&-dot
+		display inline-block
+		vertical-align top
+		cursor pointer
+		font-size 24px
+		line-height 1.2em
+		color #989ba1
+		text-transform uppercase
+		text-align center
+
+	@media only screen and (max-width 640px)
+		&-item
+			min-height 300px
+		&-dot
+			font-size 16px

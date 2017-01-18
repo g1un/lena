@@ -1,0 +1,159 @@
+.product
+	display block
+	font-size 0
+	height 293px
+	overflow hidden
+	&-category
+		display inline-block
+		vertical-align middle
+		margin -1px 0 -1px -1px
+		width 32.2%
+		height 293px
+		border-top 1px solid #e0e1e6
+		border-bottom 1px solid #e0e1e6
+		border-left 1px solid #e0e1e6
+		position relative
+		font-size 0
+		line-height 0
+		text-align center
+		overflow hidden
+		&:hover
+			img
+				transform scale(1.1) rotate(0.02deg)
+		&:before
+			content ''
+			display inline-block
+			vertical-align middle
+			height 100%
+		img
+			display inline-block
+			vertical-align middle
+			max-width 100%
+			max-height 100%
+			margin -1px 0 -1px -1px
+			position relative
+			backface-visibility hidden
+			transform translateZ(0) scale(1.0, 1.0)
+			transition transform .5s
+		&-link
+			position absolute
+			top 50%
+			left 50%
+			//transform translateY(-50%) translateX(-50%)
+			margin-top -55px
+			margin-left -42%
+			padding 44px 10px
+			width 84%
+			box-sizing border-box
+			background rgba(255,255,255,.9)
+			font-ptserif-bold()
+			font-size 18px
+			line-height 1.2em
+			color #434a54
+			text-transform uppercase
+			text-decoration none
+			text-align center
+			&:before
+				content ''
+				position absolute
+				top 20px
+				bottom 20px
+				left 20px
+				right 20px
+				border 1px solid #dededd
+			span
+				position relative
+	&-info
+		display inline-block
+		vertical-align middle
+		width 67.8%
+		height 293px
+		padding-left 22px
+		border-top 1px solid #e0e1e6
+		border-bottom 1px solid #e0e1e6
+		position relative
+		font-size 0
+		&:hover
+			border-bottom 1px solid #e0e1e6 !important
+		&-wrapper
+			display inline-block
+			vertical-align middle
+			padding-left 15px
+			width: 48.6%
+			margin-right 2.7%
+		h3
+			margin 0 0 20px
+			font-ptserif-bold()
+			font-size 24px
+			line-height 1.2em
+			color #434a54
+			text-transform uppercase
+	&-material
+		margin-bottom 45px
+		font-ptserif-bold()
+		font-size 21px
+		color #aab2bd
+	&-price
+		display inline-block
+		vertical-align top
+		min-width 130px
+		padding 0 10px
+		border 1px solid #aab2bd
+		font-family "Times New Roman", Arial, sans-serif
+		font-size 24px
+		line-height 42px
+		color #434a54
+		text-align center
+		span
+			font-rouble()
+	&-image
+		display inline-block
+		vertical-align middle
+		width 48.7%
+		height 293px
+		position relative
+		font-size 0
+		line-height 0
+		text-align center
+		overflow hidden
+		&:before
+			content ''
+			display inline-block
+			vertical-align middle
+			height 100%
+		img
+			display inline-block
+			vertical-align middle
+			max-width 100%
+			max-height 100%
+
+	@media only screen and (max-width 640px)
+		height auto
+		&-category
+			width 100%
+			margin 0 0 22px
+			padding 0
+			border-top 1px solid #e0e1e6
+			border-bottom none
+			border-right 1px solid #e0e1e6
+			border-left 1px solid #e0e1e6
+			text-align center
+			&:before
+				display none
+			img
+				vertical-align top
+		&-info
+			width 100%
+			margin 0
+			border-top none
+			border-bottom 1px solid #e0e1e6
+			border-right 1px solid #e0e1e6
+			border-left 1px solid #e0e1e6
+			height auto
+		&-image
+			width 100%
+			padding 0
+			//border-top none
+			//border-bottom 1px solid #e0e1e6
+			//border-right 1px solid #e0e1e6
+			//border-left 1px solid #e0e1e6

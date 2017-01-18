@@ -1,0 +1,14 @@
+mixin news(news)
+	.container
+		.news
+			.news-link
+				a(href="#").news-title.__news Новости
+			.news-item
+				.news-item-wrapper
+					h3!= news.title
+					span.news-item-date!= news.date
+					p!= news.text
+					a(href="#").news-item-link Подробнее
+			a(href="#").news-products
+				img(src="#{ images('example/' + news.image + '.jpg') }", alt="#{news.image}")
+				.news-title Новая продукция

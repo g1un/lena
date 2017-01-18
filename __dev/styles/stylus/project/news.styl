@@ -1,0 +1,120 @@
+.news
+	font-size 0
+	height 293px
+	margin-bottom 135px
+	&-link
+		display inline-block
+		vertical-align middle
+		width 32.2%
+		margin-right 1.7%
+		height 293px
+		background #fafbff
+		position relative
+	&-item
+		display inline-block
+		vertical-align middle
+		width 32.2%
+		height 293px
+		margin-right 1.7%
+		padding-left 37px
+		position relative
+		font-size 0
+		&:before
+			content ''
+			display inline-block
+			vertical-align middle
+			height 100%
+		&-wrapper
+			display inline-block
+			vertical-align middle
+		h3
+			font-ptserif-bold()
+			font-size 18px
+			color #030303
+			text-transform uppercase
+			margin-bottom 10px
+		&-date
+			display block
+			font-size 13px
+			color #aab2bd
+			margin-bottom 30px
+		p
+			font-size 13px
+			color #656d78
+			margin-bottom 35px
+		&-link
+			font-ptserif-bold()
+			font-size 14px
+			color #aab2bd
+			text-decoration none
+			&:hover
+				text-decoration underline
+	&-products
+		display inline-block
+		vertical-align middle
+		width 32.2%
+		height 293px
+		position relative
+		font-size 0
+		line-height 0
+		text-align center
+		overflow hidden
+		&:hover
+			img
+				transform scale(1.1) rotate(0.02deg)
+		&:before
+			content ''
+			display inline-block
+			vertical-align middle
+			height 100%
+		img
+			display inline-block
+			vertical-align middle
+			max-width 100%
+			max-height 100%
+			backface-visibility hidden
+			transform translateZ(0) scale(1.0, 1.0)
+			transition transform .5s
+		.news-title
+			&:hover
+				text-decoration none
+	&-title
+		position absolute
+		top 50%
+		left 50%
+		//transform translateY(-50%) translateX(-50%)
+		margin-top -55px
+		margin-left -42%
+		padding 44px 10px
+		width 84%
+		box-sizing border-box
+		background rgba(255,255,255,.9)
+		font-ptserif-bold()
+		font-size 18px
+		line-height 1.2em
+		color #434a54
+		text-transform uppercase
+		text-decoration none
+		text-align center
+		&.__news
+			background transparent
+		&:hover
+			text-decoration underline
+		&:before
+			content ''
+			position absolute
+			top 20px
+			bottom 20px
+			left 20px
+			right 20px
+			border 1px solid #dededd
+		span
+			position relative
+
+	@media only screen and (max-width 640px)
+		height auto
+		margin-bottom 10px
+		&-link,
+		&-item,
+		&-products
+			width 100%

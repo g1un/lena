@@ -1,0 +1,15 @@
+mixin documents(item)
+	+namespace("documents")
+		+el().js-documents
+			+el("inner")
+				+el("title")!= item.title
+				+el("content").js-documents-content
+					-var id = createId();
+					for links in item.links
+						if links.list
+							+accordion(links.title, {group: 'documents-' + id})
+								.documents-list
+									for link in links.list
+										+document(link)
+						else
+							+document(links)

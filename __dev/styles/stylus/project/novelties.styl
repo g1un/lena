@@ -1,0 +1,213 @@
+.novelties
+	max-width 100%
+	overflow hidden
+	&-title
+		text-align center
+		position relative
+		//margin-bottom 85px
+		&:before
+			content ''
+			position absolute
+			top 50%
+			left 0
+			right 0
+			background #929292
+			height 1px
+		h3
+			display inline-block
+			vertical-align top
+			padding 0 25px
+			font-ptserif-bold()
+			font-size 24px
+			line-height 1.2em
+			color #434a54
+			text-transform uppercase
+			background #fff
+			position relative
+			&:before,
+			&:after
+				content ''
+				position absolute
+				top 0
+				bottom 0
+				width 100px
+				background #fff
+			&:before
+				left -100px
+				background linear-gradient(to left, #fff, transparent)
+			&:after
+				right -100px
+				background linear-gradient(to right, #fff, transparent)
+	&-list
+		max-width 1600px
+		margin 0 auto
+	&-post
+		background #fff
+		&-date
+			font-ptsans-reg()
+			font-size 14px
+			color #ccd0d9
+			margin-bottom 30px
+		&-title
+			font-ptserif-bold()
+			font-size 18px
+			color #434a54
+			text-transform uppercase
+			margin-bottom 25px
+			span
+				display block
+				font-tnr()
+				font-size 27px
+				text-transform none
+		&-tags
+			font-ptsans-reg()
+			font-size 14px
+			color #aab2bd
+	&-list
+		position relative
+		height 310px
+		.post-0
+			position absolute
+			top 60px
+			left 50%
+			margin-left -851px
+			background #fff
+			font-size 0
+			white-space nowrap
+			.novelties
+				&-post
+					&-image
+						display inline-block
+						vertical-align top
+						margin-right 13px
+					&-wrapper
+						display inline-block
+						vertical-align top
+						width 270px
+						padding-top 20px
+						padding-right 20px
+						white-space normal
+					&-date
+						margin-bottom 15px
+					&-title
+						margin-bottom 34px
+						span
+							margin-top 6px
+					&-tags
+						max-height 57px
+						overflow hidden
+		.post-1
+			width 494px
+			border 3px solid #eff1f3
+			padding 53px 60px 61px 110px
+			position absolute
+			top 0
+			left 50%
+			margin-left -237px
+			.novelties
+				&-post
+					&-image
+						position absolute
+						top 18px
+						left -183px
+					&-date
+						margin-bottom 35px
+					&-title
+						margin-bottom 34px
+						span
+							margin-top 6px
+		.post-2
+			width 380px
+			border 3px solid #eff1f3
+			padding 17px 60px 7px 55px
+			position absolute
+			top 165px
+			left 50%
+			margin-left 443px
+			.novelties
+				&-post
+					&-image
+						position absolute
+						top -30px
+						left -263px
+						border 15px solid #fff
+						background #fff
+					&-date
+						margin-bottom 27px
+					&-title
+						margin-bottom 25px
+						line-height 30px
+						span
+							margin-top 6px
+					&-tags
+						max-height 57px
+						overflow hidden
+		.post-3
+			width 530px
+			border 3px solid #eff1f3
+			padding 40px 20px 26px 47px
+			position absolute
+			top 346px
+			left 50%
+			margin-left -535px
+			.novelties
+				&-post
+					&-image
+						position absolute
+						top -18px
+						right -207px
+						border 15px solid #fff
+						background #fff
+					&-date
+						margin-bottom 27px
+					&-title
+						margin-bottom 25px
+						line-height 30px
+						span
+							margin-top 6px
+					&-tags
+						max-height 57px
+						overflow hidden
+		.image-0
+			position absolute
+			top -71px
+			left 50%
+			margin-left -769px
+		.image-1
+			position absolute
+			top -140px
+			left 50%
+			margin-left -514px
+		.image-2
+			position absolute
+			top 79px
+			left 50%
+			margin-left 248px
+			img
+				max-width none
+
+	@media only screen and (max-width 640px)
+		&-list
+			height auto
+			.image-0,
+			.image-1,
+			.image-2
+				display none
+			.post-0,
+			.post-1,
+			.post-2,
+			.post-3
+				position static
+				margin 15px
+				width auto
+				white-space normal
+				.novelties
+					&-post
+						&-image
+							position static
+							margin 0
+							display block
+		&-post
+			padding 15px
+			border 3px solid #eff1f3
+			display block

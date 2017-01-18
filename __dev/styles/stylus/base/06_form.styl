@@ -1,0 +1,121 @@
+//main
+//	.req
+//		font-size: 12px;
+//		color: #db2a2a;
+//		position: relative;
+//		top: -5px;
+//
+//.form
+//	position relative
+//	&-item
+//		&.width-50
+//			padding-right: 13px;
+//			border-box()
+//		&-right
+//			display: inline-block;
+//			vertical-align: middle;
+//			position: relative;
+//			top: -2px;
+//			margin-left: 28px;
+//			&-number, &-date
+//				display: inline-block;
+//				vertical-align: middle;
+//				margin-left 20px
+//				input[type="text"]
+//					width 100%
+//			&-number
+//				margin-left 15px
+//				width 50px
+//			&-date
+//				width 145px
+//
+//		margin-bottom 18px
+//		&-column
+//			width 210px
+//			margin-left 26px
+//			&:first-of-type
+//				margin-left 0
+//		&.error
+//			.ui-select-wrapper
+//				.ui-selectmenu-button
+//					border 1px solid #f0b8b8 !important
+//
+//	&-column-line
+//		margin: 30px -30px 0;
+//		padding: 20px 30px;
+//		border-top: 1px solid #dae3e4;
+//		& + .form-column-line
+//			margin-top 0
+//	&-attention
+//		color #686868
+//		font-size 12px
+//		margin-bottom: 25px;
+//		margin-top: 27px;
+//		text-align left
+//	textarea
+//		height 168px
+//
+//	label
+//		font-size 14px
+//		text-align left
+//		color #000
+//		display block
+//		margin-bottom 10px
+//	input,
+//	textarea
+//		& + label
+//			display inline-block
+//			vertical-align middle
+//			margin-bottom 0
+//			margin-left 10px
+//
+//	&.compact
+//		input,
+//		textarea
+//			width 60%
+//
+//	&.error
+//		input,
+//		textarea
+//			border 1px solid #f0b8b8 !important
+//			box-shadow 0 0 5px rgba(219,42,42, 0.20) !important
+//
+//
+//.error-msg
+//	margin-top 10px
+//	display inline-block
+//	margin-left 10px
+//	color #db2a2a
+//	font-size 14px
+//	text-align left
+
+.form
+	display table
+	width 100%
+	&-row
+		display table-row
+	&-label
+		display table-cell
+		vertical-align middle
+		padding-right 30px
+		padding-bottom 9px
+		min-width 140px
+		label
+			display inline-block
+			vertical-align middle
+			font-size 14px
+			color #666
+	&-control
+		display table-cell
+		vertical-align middle
+		padding-bottom 9px
+		width 100%
+		input
+			display block
+			width 100%
+			padding 7px 9px 8px
+			border-radius 4px
+			border 1px solid #ccc
+			box-shadow inset 0 1px 3px 0 rgba(0,0,0,.12)
+			font-size 14px
+			color #666

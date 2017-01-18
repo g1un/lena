@@ -1,0 +1,8 @@
+mixin document(item)
+	+namespace("document")
+		+el("", "a")(href="#")
+			+el("title", "span")!= 'Разместил: ' + item.title
+			|#[br]
+			+el("info", "span")!= 'Разместил: ' + item.info
+			|#[br]
+			+el("download", "span") Скачать

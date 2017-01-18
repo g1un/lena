@@ -1,0 +1,27 @@
+mixin catalog(catalog)
+	+namespace("catalog")
+		+el()
+			+el("title")
+				h2 Изделия из меха
+			+el("filter", "form")
+				+el("filter-item")
+					+el("filter-title") Вид изделий
+					+el("filter-select")
+						select(name="catalog-type", id="catalog-type").js-select
+							option(value="0") Все виды
+							option(value="1") Вид 1
+							option(value="2") Вид 2
+				+el("filter-item")
+					+el("filter-title") Вид меха
+					+el("filter-select")
+						select(name="catalog-fur", id="catalog-fur").js-select
+							option(value="0") Все виды
+							option(value="1") Вид 1
+							option(value="2") Вид 2
+			+el("list").container
+				each val, index in catalog
+					+el("item", "a")(href="#")
+						+el("item-img")
+							img(src="#{images('example/gallery/catalog-img-' + ((index%6) + 1) + '.jpg')}")
+						p!= val
+			+el("more", "a")(href="#") Показать еще 20

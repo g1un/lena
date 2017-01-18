@@ -1,0 +1,7 @@
+mixin social()
+	+namespace("social")
+		+el()
+			+el("list", "ul")
+				each val in ["vk", "fb", "twitter", "google", "ok"]
+					+el("item", "li")
+						+el("link", "a")(href="#", target="_blank").social-link(class="__#{val}")

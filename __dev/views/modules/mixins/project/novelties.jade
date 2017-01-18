@@ -1,0 +1,23 @@
+mixin novelties(novelties)
+	+namespace("novelties")
+		+el()
+			+el("title")
+				h3 Последние новинки
+			+el("list", "ul").js-parallax-1
+				each val, index in novelties.posts
+					+el("post", "li")(class="post-#{index}")
+						+el("post-image")
+							img(src="#{images('example/' + val.image + '.jpg')}", alt="#{val.image}")
+						+el("post-wrapper")
+							+el("post-date")!= val.date
+							+el("post-title")!= val.title
+							+el("post-tags")
+								each elem in val.tags
+									span!= elem + " "
+			+el("list", "ul").js-parallax-2
+				each val, index in novelties.images
+					+el("image", "li")(class="image-#{index}")
+						img(src="#{images('example/' + val + '.jpg')}", alt="#{val}")
+
+
+

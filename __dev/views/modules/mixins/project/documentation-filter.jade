@@ -1,0 +1,23 @@
+mixin documentation-filter()
+	.documents
+		.documentation-filter.clearfix
+			form(action="")
+				.form-item
+					.form-label.documentation-filter-title Шрифт
+					.documentation-filter-slider
+						span 16px
+						.documentation-filter-range
+							.slider-font(data-slider-font="")
+						span 24px
+				.form-item
+					select
+						option(value="1") ВСЕ РАЗДЕЛЫ
+						option(value="2") Magnam, laboriosam, non.
+						option(value="3") Quisquam, rerum tempora!
+				.form-item.datepicker
+					input(type="text", name="" placeholder="ЛЮБАЯ ДАТА", data-datepicker="")
+					i.fa.fa-calendar
+				.form-reset.documentation-filter-reset
+					input(type="reset", value="Сбросить")
+				.form-submit.documentation-filter-submit
+					input(type="submit", value="Показать", data-button="")

@@ -1,0 +1,201 @@
+.header
+	position relative
+	&-up
+		border-bottom 1px solid #f0f1f1
+		padding 16px 0
+		&-menu
+			max-width 880px
+			padding 0 10px
+			margin 0 auto
+			li
+				font-size 14px
+				line-height 22px
+				color #aab2bd
+				a
+					text-decoration none
+					&:hover
+						text-decoration underline
+	&-lang
+		float left
+		margin-right 40px
+		cursor pointer
+		position relative
+		.ui-selectmenu-button
+			border none
+			background transparent
+			min-width 100px
+			font-ptserif-reg()
+			font-size 14px
+			line-height 22px
+			color #aab2bd
+			position relative
+			span.ui-selectmenu-text
+				padding 0
+				padding-right 15px
+				text-align right
+			span.ui-icon
+				display block
+				top 0
+				bottom 0
+				right 0
+				left auto
+				margin 0
+				width 15px
+				background transparent
+				&:before
+					content ''
+					position absolute
+					top 5px
+					right 1px
+					width 7px
+					height 7px
+					border-left 2px solid #aab2bd
+					border-bottom 2px solid #aab2bd
+					transform rotate(-45deg)
+		.ui-menu
+			.ui-menu-item
+				font-ptserif-reg()
+				text-align right
+	&-contacts
+		float left
+	&-mail
+		float right
+		&-link
+			display block
+			padding-right 35px
+			position relative
+			&:before
+				content ''
+				position absolute
+				top 3px
+				right 0
+				sprite(mail)
+	&-basket
+		float right
+		margin-left 40px
+		&-link
+			padding-right 45px
+			display block
+			position relative
+			&:before
+				content ''
+				position absolute
+				top 0
+				right 12px
+				sprite(basket)
+			&:after
+				content attr(data-basket-goods)
+				position absolute
+				top 4px
+				right 0
+				width 17px
+				height 17px
+				background #40546f
+				border-radius 50%
+				font-size 12px
+				line-height 17px
+				color #fff
+				font-weight 700
+				text-align center
+	&-down
+		max-width 800px
+		padding 0 10px
+		margin 0 auto
+		li
+			&:nth-child(1),
+			&:nth-child(2)
+				float left
+			&:nth-child(3),
+			&:nth-child(4)
+				float right
+			&:nth-child(1)
+				margin-right 40px
+				position relative
+				&:before
+					content ''
+					position absolute
+					top 50%
+					right -23px
+					margin-top -4px
+					width 7px
+					height 7px
+					border-radius 50%
+					background #ecf0f5
+			&:nth-child(3)
+				margin-left 40px
+				position relative
+				&:before
+					content ''
+					position absolute
+					top 50%
+					left -23px
+					margin-top -4px
+					width 7px
+					height 7px
+					border-radius 50%
+					background #ecf0f5
+		a
+			display block
+			font-size 15px
+			line-height 71px
+			font-weight 700
+			text-transform uppercase
+			text-decoration none
+			&:hover
+				text-decoration underline
+	&-logo
+		position absolute
+		top 7px
+		left 50%
+		margin-left -50px
+		background #fff
+
+	@media only screen and (max-width 640px)
+		&-up
+			height 77px
+			column-count 2
+		&-lang,
+		&-contacts
+		&-basket,
+		&-mail
+			float none
+			padding 0
+		&-lang
+			height 22px
+			margin 0
+			.ui-selectmenu-button span.ui-selectmenu-text
+				text-align left
+		&-basket
+			&-link
+				padding 0
+				text-align right
+				&:before,
+				&:after
+					display none
+		&-mail
+			&-link
+				padding 0
+				text-align right
+				&:before
+					display none
+		&-logo
+			margin-left -25px
+			img
+				width 50px
+		&-down
+			column-count 2
+			li
+				margin 0
+				float none !important
+				&:nth-child(3),
+				&:nth-child(4)
+					a
+						text-align right
+				&:before
+					display none
+			a
+				line-height 1.5em
+				padding 0
+
+
+

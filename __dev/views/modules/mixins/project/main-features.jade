@@ -1,0 +1,10 @@
+mixin main-features(features)
+	ul.main-features.container
+		each item, index in features
+			li.main-features-item
+				a(href="#").main-features-link
+					img(src="#{ images('example/main-features-item-' + index + '.jpg') }", alt="main-features-item-#{index}")
+					h3!= item.title
+					-if(item.subtitle) {
+						p!= item.subtitle
+					-}
