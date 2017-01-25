@@ -12,7 +12,17 @@
 			a(href="#").header-mail-link Написать нам
 ul.header-down.clearfix
 	each val in ["Новое", "Для женщин", "Коллекции", "Для мужчин"]
-		li
+		li(class="#{val == 'Для женщин' ? 'js-header-women-btn' : ''}")
 			a(href="#") #{val}
+			if val == 'Для женщин'
+				.header-down-menu.js-header-women-menu
+					ul.header-down-menu-list
+						-var menuList = ["Головные уборы", "Аксессуары", "Сумки", "Изделия из кожи", "Изделия из меха"]
+						each val in range(0,9)
+							li
+								a(href="#")
+									img(src="#{images('example/gallery/header-women-catalog-' + (val % 5 + 1) + '.jpg')}", alt="header-women-catalog-#{val % 4 + 1}")
+									p!= menuList[val%5]
+
 .header-logo
 	img(src="#{ images('logo.png') }", alt="logo")

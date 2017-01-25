@@ -5,15 +5,18 @@ $$icons = {
 	's-twitter-footer': 50px 0px -50px 0px 30px 30px 80px 80px 'images/icons/__sprite.png'
 	's-vk-footer': 0px 50px 0px -50px 30px 30px 80px 80px 'images/icons/__sprite.png'
 }
-$spritesCount = 7
+$spritesCount = 10
 $$sprite = {
-	's-basket': 134px 0px -134px 0px 18px 22px 152px 113px 'images/sprites/__sprite.png'
-	's-fb': 100px 0px -100px 0px 14px 27px 152px 113px 'images/sprites/__sprite.png'
-	's-google': 0px 0px 0px 0px 33px 28px 152px 113px 'images/sprites/__sprite.png'
-	's-mail': 0px 98px 0px -98px 20px 15px 152px 113px 'images/sprites/__sprite.png'
-	's-ok': 0px 48px 0px -48px 19px 30px 152px 113px 'images/sprites/__sprite.png'
-	's-twitter': 53px 0px -53px 0px 27px 23px 152px 113px 'images/sprites/__sprite.png'
-	's-vk': 39px 48px -39px -48px 18px 23px 152px 113px 'images/sprites/__sprite.png'
+	's-arrow-bottom': 0px 48px 0px -48px 39px 14px 179px 112px 'images/sprites/__sprite.png'
+	's-arrow-top': 100px 0px -100px 0px 39px 14px 179px 112px 'images/sprites/__sprite.png'
+	's-basket-black': 111px 82px -111px -82px 17px 21px 179px 112px 'images/sprites/__sprite.png'
+	's-basket': 73px 82px -73px -82px 18px 22px 179px 112px 'images/sprites/__sprite.png'
+	's-fb': 39px 82px -39px -82px 14px 27px 179px 112px 'images/sprites/__sprite.png'
+	's-google': 0px 0px 0px 0px 33px 28px 179px 112px 'images/sprites/__sprite.png'
+	's-mail': 159px 0px -159px 0px 20px 15px 179px 112px 'images/sprites/__sprite.png'
+	's-ok': 0px 82px 0px -82px 19px 30px 179px 112px 'images/sprites/__sprite.png'
+	's-twitter': 53px 0px -53px 0px 27px 23px 179px 112px 'images/sprites/__sprite.png'
+	's-vk': 100px 34px -100px -34px 18px 23px 179px 112px 'images/sprites/__sprite.png'
 }
 // BASE
 TITLE_CLASS = 'title'
@@ -1197,11 +1200,11 @@ main
 	+$italic()
 		font-style italic
 
-	a
+	//a
 	//	color LINK_COLOR
-		&:hover
-			text-decoration none
-			border-bottom none
+	//	&:hover
+			//text-decoration none
+			//border-bottom none
 	//		color LINK_COLOR_HOVER
 	img
 		max-width 100%
@@ -1489,37 +1492,84 @@ $$fullWidth
 //	font-size 14px
 //	text-align left
 
-.form
-	display table
-	width 100%
-	&-row
-		display table-row
-	&-label
-		display table-cell
-		vertical-align middle
-		padding-right 30px
-		padding-bottom 9px
-		min-width 140px
-		label
-			display inline-block
-			vertical-align middle
-			font-size 14px
-			color #666
-	&-control
-		display table-cell
-		vertical-align middle
-		padding-bottom 9px
-		width 100%
-		input
-			display block
-			width 100%
-			padding 7px 9px 8px
-			border-radius 4px
-			border 1px solid #ccc
-			box-shadow inset 0 1px 3px 0 rgba(0,0,0,.12)
-			font-size 14px
-			color #666
+//.form
+//	display table
+//	width 100%
+//	&-row
+//		display table-row
+//	&-label
+//		display table-cell
+//		vertical-align middle
+//		padding-right 30px
+//		padding-bottom 9px
+//		min-width 140px
+//		label
+//			display inline-block
+//			vertical-align middle
+//			font-size 14px
+//			color #666
+//	&-control
+//		display table-cell
+//		vertical-align middle
+//		padding-bottom 9px
+//		width 100%
+//		input
+//			display block
+//			width 100%
+//			padding 7px 9px 8px
+//			border-radius 4px
+//			border 1px solid #ccc
+//			box-shadow inset 0 1px 3px 0 rgba(0,0,0,.12)
+//			font-size 14px
+//			color #666
 
+.form
+	font-size 0
+	&-item
+		display inline-block
+		vertical-align top
+		margin-right 20px
+		&:last-child
+			margin-right 0
+	&-title
+		padding-left 20px
+		margin-bottom 7px
+		font-size 14px
+		color #878b90
+		text-align left
+	&-select
+		font-size 18px
+		color #434a54
+		text-align left
+		.ui-widget
+			border 1px solid #e0e1e6
+			border-radius 0
+			min-width 180px
+			background #fcfcfc
+			font-ptserif-reg()
+			font-size 18px
+			color #434a54
+		.ui-selectmenu-button
+			span.ui-selectmenu-text
+				line-height 42px
+				padding 0 35px 0 20px
+			span.ui-icon
+				top 24px
+				right 22px
+				bottom auto
+				left auto
+		.ui-selectmenu-wrapper
+			line-height 0
+		.ui-icon
+			background none
+			position absolute
+			top 0
+			left 0
+			width 8px
+			height 8px
+			border-left 1px solid #000
+			border-bottom 1px solid #000
+			transform rotate(-45deg)
 
 // .bx-core-window,
 // .bxcompprop-content,

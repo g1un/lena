@@ -1,0 +1,38 @@
+.products-list
+	text-align justify
+	padding-bottom 60px
+	border-bottom 1px solid #dedede
+	&:after
+		content ''
+		display inline-block
+		vertical-align top
+		width 100%
+	&-item
+		display inline-block
+		vertical-align top
+		width 32.2%
+		margin-bottom 60px
+		text-decoration none
+	&-image
+		min-height 522px
+		border 1px solid #e0e1e6
+		padding-top 20px
+		line-height 0
+		margin-bottom 20px
+		text-align center
+	&-desc
+		font-size 18px
+		color #434a54
+		text-align center
+	&-price
+		margin-top 15px
+		font-ptserif-bold()
+		font-size 18px
+		color #000
+		text-align center
+	@media only screen and (max-width 1200px)
+		&-item
+			width 49%
+	@media only screen and (max-width 768px)
+		&-item
+			width 100%

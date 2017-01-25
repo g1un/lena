@@ -1,0 +1,9 @@
+mixin products-list(list)
+	+namespace("products-list")
+		+el().container
+			each val, index in list
+				+el("item", "a")(href="#")
+					+el("image")
+						img(src="#{images('example/gallery/catalog-img-' + (index + 1) + '.jpg')}")
+					+el("desc", "p")!= val.desc
+					+el("price", "p") #{val.price} #[span.rub v]

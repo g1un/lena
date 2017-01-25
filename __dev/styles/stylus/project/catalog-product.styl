@@ -1,0 +1,169 @@
+.catalog-product
+	font-size 0
+	margin-bottom 75px
+	&-image
+		display table-cell
+		vertical-align top
+		width 510px
+		line-height 0
+		cursor pointer
+		&-wrapper
+			position relative
+			margin 0 auto
+			width 510px
+			height 640px
+		img
+			position absolute
+			top 0
+			bottom 0
+			border 1px solid #e0e1e6
+			max-width 100%
+			max-height 100%
+	&-gallery
+		display table-cell
+		vertical-align top
+		width 195px
+		padding 0 59px 0 30px
+		&-list
+			padding 55px 0
+	&-thumbnail
+		line-height 0
+		padding 10px 0
+		img
+			width 100%
+			line-height 0
+			border 1px solid #e0e1e6
+			cursor pointer
+			&:hover,
+			&.__active
+				border 1px solid #b7bac8
+				outline 1px solid #b7bac8
+	&-info
+		display table-cell
+		vertical-align top
+		width 475px
+	&-title
+		margin-bottom 15px
+		font-ptserif-bold()
+		font-size 24px
+		color #434a54
+		text-transform uppercase
+	&-tabs
+		margin-bottom 55px
+	&-parameters
+		padding-bottom 5px
+		border-bottom 1px solid #dedede
+		margin-bottom 15px
+	&-option
+		display inline-block
+		vertical-align top
+		margin-right 30px
+		font-size 18px
+		color #89909b
+		text-decoration none
+		cursor pointer
+		&:hover,
+		&.__current
+			color #000
+		&:last-child
+			margin-right 0
+	&-paragraph
+		font-size 16px
+		line-height 26px
+		color #434a54
+		&.__visible
+			display block
+		&.__hidden
+			display none
+	&-form
+		margin-bottom 20px
+	&-select
+		&.form-select
+			.ui-widget
+				min-width 150px
+	&-sizes
+		display block
+		float left
+		clear both
+		margin-bottom 35px
+		font-size 16px
+		color #434a54
+		text-decoration none
+		&:hover
+			text-decoration underline
+	&-basket
+		display block
+		float left
+		clear both
+		font-ptserif-bold()
+		font-size 18px
+		line-height 21px
+		color #000
+		text-transform uppercase
+		text-decoration none
+		text-align center
+		border 1px solid #e0e1e6
+		padding 20px 40px
+		min-width 320px
+		position relative
+		&:hover
+			text-decoration underline
+		&:before
+			content ''
+			display inline-block
+			vertical-align top
+			margin-right 10px
+			sprite(basket-black)
+	@media only screen and (max-width 1200px)
+		&-image
+			width 100%
+			&-wrapper
+				width 100%
+				img
+					left 50%
+					transform translateX(-50%)
+		&-gallery
+			max-width 195px
+			min-width 195px
+			width 100%
+		&-info
+			display block
+			margin 20px auto 0
+			max-width 475px
+			width auto
+	@media only screen and (max-width 1024px)
+		&-image
+			display block
+		&-gallery
+			display block
+			max-width 100%
+			min-width 0
+			width auto
+		&-thumbnail
+			img
+				max-width 100px
+				margin 0 auto
+	@media only screen and (max-width 768px)
+		&-basket
+			float none
+			padding-left 30px
+			padding-right 30px
+			max-width 300px
+			min-width 0
+			margin 0 auto
+		&-select
+			&.form-select
+				.ui-widget
+					min-width 130px
+		&-form
+			.form-item
+				margin-right 10px
+	@media only screen and (max-width 600px)
+		&-image
+			&-wrapper
+				width 100%
+				height 320px
+		&-thumbnail
+			img
+				max-width 60px
+

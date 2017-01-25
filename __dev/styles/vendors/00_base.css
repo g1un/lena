@@ -265,20 +265,16 @@ main i,
 main .italic {
   font-style: italic;
 }
-main a:hover {
-  text-decoration: none;
-  border-bottom: none;
-}
-main img {
+img {
   max-width: 100%;
   height: auto;
 }
-main .big {
+.big {
   font-size: 120%;
   font-size: 1.2em;
 }
-main small,
-main .small {
+small,
+.small {
   font-size: 80%;
   font-size: 0.8em;
 }
@@ -553,45 +549,69 @@ main .small {
   cursor: text;
 }
 .form {
-  display: table;
-  width: 100%;
+  font-size: 0;
 }
-.form-row {
-  display: table-row;
-}
-.form-label {
-  display: table-cell;
-  vertical-align: middle;
-  padding-right: 30px;
-  padding-bottom: 9px;
-  min-width: 140px;
-}
-.form-label label {
+.form-item {
   display: inline-block;
-  vertical-align: middle;
-  font-size: 14px;
-  color: #666;
+  vertical-align: top;
+  margin-right: 20px;
 }
-.form-control {
-  display: table-cell;
-  vertical-align: middle;
-  padding-bottom: 9px;
-  width: 100%;
+.form-item:last-child {
+  margin-right: 0;
 }
-.form-control input {
-  display: block;
-  width: 100%;
-  padding-top: 7px;
-  padding-right: 9px;
-  padding-bottom: 8px;
-  padding-left: 9px;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
-  border: 1px solid #ccc;
-  -webkit-box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.12);
-     -moz-box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.12);
-          box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.12);
+.form-title {
+  padding-left: 20px;
+  margin-bottom: 7px;
   font-size: 14px;
-  color: #666;
+  color: #878b90;
+  text-align: left;
+}
+.form-select {
+  font-size: 18px;
+  color: #434a54;
+  text-align: left;
+}
+.form-select .ui-widget {
+  border: 1px solid #e0e1e6;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+  min-width: 180px;
+  background: #fcfcfc;
+  font-family: PTSerif, sans-serif;
+  line-height: 1.2em;
+  font-weight: 400;
+  font-size: 18px;
+  color: #434a54;
+}
+.form-select .ui-selectmenu-button span.ui-selectmenu-text {
+  line-height: 42px;
+  padding-top: 0;
+  padding-right: 35px;
+  padding-bottom: 0;
+  padding-left: 20px;
+}
+.form-select .ui-selectmenu-button span.ui-icon {
+  top: 24px;
+  right: 22px;
+  bottom: auto;
+  left: auto;
+}
+.form-select .ui-selectmenu-wrapper {
+  line-height: 0;
+}
+.form-select .ui-icon {
+  background: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
+  -webkit-transform: rotate(-45deg);
+     -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+       -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }

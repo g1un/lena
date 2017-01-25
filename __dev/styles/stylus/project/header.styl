@@ -101,7 +101,46 @@
 		max-width 800px
 		padding 0 10px
 		margin 0 auto
-		li
+		&-menu
+			display none
+			position absolute
+			top 100%
+			left 0
+			right 0
+			z-index 2
+			padding 50px 0 15px
+			background #fff
+			box-shadow 0 3px 27px 0 rgba(0,0,0,.08)
+			&-list
+				width 915px
+				margin 0 auto
+				font-size 0
+				line-height 0
+				text-align left
+				//&:after
+				//	content ''
+				//	width 100%
+				//	display inline-block
+				//	vertical-align top
+				li
+					display inline-block
+					vertical-align top
+					width 16%
+					margin-right 5%
+					margin-bottom 45px
+					&:nth-child(5n)
+						margin-right 0
+				a
+					text-decoration none
+				img
+					margin-bottom 10px
+				p
+					font-ptserif-bold()
+					font-size 15px
+					color #434a54
+					text-align center
+					line-height 1.2em
+		&>li
 			&:nth-child(1),
 			&:nth-child(2)
 				float left
@@ -134,22 +173,30 @@
 					height 7px
 					border-radius 50%
 					background #ecf0f5
-		a
-			display block
-			font-size 15px
-			line-height 71px
-			font-weight 700
-			text-transform uppercase
-			text-decoration none
-			&:hover
-				text-decoration underline
+			&>a
+				display block
+				font-size 15px
+				line-height 71px
+				font-weight 700
+				text-transform uppercase
+				text-decoration none
+				&:hover
+					color #878b90
+				//&.__women
+				//	&:hover
+				//		.header-down-menu
+				//			display block
 	&-logo
 		position absolute
 		top 7px
 		left 50%
 		margin-left -50px
 		background #fff
-
+	@media only screen and (max-width 1024px)
+		&-down
+			&-menu
+				&-list
+					width auto
 	@media only screen and (max-width 640px)
 		&-up
 			height 77px
@@ -184,7 +231,7 @@
 				width 50px
 		&-down
 			column-count 2
-			li
+			&>li
 				margin 0
 				float none !important
 				&:nth-child(3),
@@ -193,9 +240,20 @@
 						text-align right
 				&:before
 					display none
-			a
-				line-height 1.5em
-				padding 0
+				&>a
+					line-height 1.5em
+					padding 0
+			&-menu
+				&-list
+					li
+						width 30%
+						margin-bottom 30px
+						&:nth-child(5n)
+							margin-right 5%
+						&:nth-child(3n)
+							margin-right 0
+
+
 
 
 

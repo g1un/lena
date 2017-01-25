@@ -1,0 +1,8 @@
+extends layouts/_default
+
+block vars
+	-var currentPageTitle = ["Товар"]
+block content
+	+breadcrumbs(["Главная", "Сумки", "Кисет"])
+	+catalog-product()
+	+recommendations()

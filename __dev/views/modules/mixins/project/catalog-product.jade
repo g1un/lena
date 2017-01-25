@@ -1,0 +1,43 @@
+mixin catalog-product()
+	+namespace("catalog-product")
+		+el()
+			+title("Сумки")
+			.container
+				+el("image")
+					+el("image-wrapper").js-product-gallery-image
+						img(src="#{images('example/bag.jpg')}", alt="bag")
+				+el("gallery").js-product-gallery
+					+el("gallery-list").js-product-gallery-list
+						for i in range(0,7)
+							+el("thumbnail", "a")(href="#{ (i == 0 ? images('example/bag.jpg') : getImage( random(2000, 3000), random(2000, 3000) )) }" target="_blank" class="#{ i == 0 ? '__current' : '' }").js-product-gallery-item
+								img(src="#{images('example/gallery/catalog-product-thumbnail-' + (i % 3 + 1) + '.jpg')}", alt="catalog-product-thumbnail-#{i % 3 + 1}")
+				+el("info").clearfix
+					+el("title") Кисет
+					+el("tabs")
+						+el("parameters")(data-tab-group="").js-product-options
+							+el("option", "a")(href="#", data-tab=".js-product-parameters-text-1").js-product-option Описание
+							+el("option", "a")(href="#", data-tab=".js-product-parameters-text-2").js-product-option Характеристики
+						+el("texts")
+							+el("paragraph", "p").js-product-parameters-text-1 Кожанный кисет станет актуальным выбором для женщины, ведущей активный образ жизни. Данная модель является прекрасным дополнением повседневного образа. Обратите внимание на удобный регулируемый ремень и съемный кошелек.
+							+el("paragraph", "p").js-product-parameters-text-2
+								b Размер: 22.5 см x 12 см<br>
+								b Цвет: белый с черной отделкой<br>
+								|Элемент из натуральной кожей аллигатора<br>
+								|Съемный кошелек<br>
+								|Регулируемый ремень<br>
+								|Подкладка из кожи теленка
+					+el("form", "form")(action="#", method="get").form
+						.form-item
+							+el("select").form-select
+								select(name="catalog-product-color", id="catalog-product-color").js-select
+									option(value="0") Цвет
+									option(value="1") Вид 1
+									option(value="2") Вид 2
+						.form-item
+							+el("select").form-select
+								select(name="catalog-product-size", id="catalog-product-size").js-select
+									option(value="0") Размер
+									option(value="1") Вид 1
+									option(value="2") Вид 2
+					+el("sizes", "a")(href="#") Таблица размеров
+					+el("basket", "a")(href="#") Добавить в корзину

@@ -5,15 +5,18 @@ $$icons = {
 	's-twitter-footer': 50px 0px -50px 0px 30px 30px 80px 80px 'images/icons/__sprite.png'
 	's-vk-footer': 0px 50px 0px -50px 30px 30px 80px 80px 'images/icons/__sprite.png'
 }
-$spritesCount = 7
+$spritesCount = 10
 $$sprite = {
-	's-basket': 134px 0px -134px 0px 18px 22px 152px 113px 'images/sprites/__sprite.png'
-	's-fb': 100px 0px -100px 0px 14px 27px 152px 113px 'images/sprites/__sprite.png'
-	's-google': 0px 0px 0px 0px 33px 28px 152px 113px 'images/sprites/__sprite.png'
-	's-mail': 0px 98px 0px -98px 20px 15px 152px 113px 'images/sprites/__sprite.png'
-	's-ok': 0px 48px 0px -48px 19px 30px 152px 113px 'images/sprites/__sprite.png'
-	's-twitter': 53px 0px -53px 0px 27px 23px 152px 113px 'images/sprites/__sprite.png'
-	's-vk': 39px 48px -39px -48px 18px 23px 152px 113px 'images/sprites/__sprite.png'
+	's-arrow-bottom': 0px 48px 0px -48px 39px 14px 179px 112px 'images/sprites/__sprite.png'
+	's-arrow-top': 100px 0px -100px 0px 39px 14px 179px 112px 'images/sprites/__sprite.png'
+	's-basket-black': 111px 82px -111px -82px 17px 21px 179px 112px 'images/sprites/__sprite.png'
+	's-basket': 73px 82px -73px -82px 18px 22px 179px 112px 'images/sprites/__sprite.png'
+	's-fb': 39px 82px -39px -82px 14px 27px 179px 112px 'images/sprites/__sprite.png'
+	's-google': 0px 0px 0px 0px 33px 28px 179px 112px 'images/sprites/__sprite.png'
+	's-mail': 159px 0px -159px 0px 20px 15px 179px 112px 'images/sprites/__sprite.png'
+	's-ok': 0px 82px 0px -82px 19px 30px 179px 112px 'images/sprites/__sprite.png'
+	's-twitter': 53px 0px -53px 0px 27px 23px 179px 112px 'images/sprites/__sprite.png'
+	's-vk': 100px 34px -100px -34px 18px 23px 179px 112px 'images/sprites/__sprite.png'
 }
 // BASE
 TITLE_CLASS = 'title'
@@ -1192,6 +1195,24 @@ html
 					margin-left -20px
 					margin-right -20px
 					padding 0
+.preloader
+	position absolute
+	top 50%
+	left 50%
+	margin-top -24px
+	margin-left -24px
+	size 48px
+	//margin auto
+	border 3px solid #fae301
+	border-radius 50%
+	border-left-color transparent
+	border-right-color transparent
+	animation cssload-spin 1100ms infinite linear
+	filter drop-shadow(0 0 2px rgba(0,0,0,0.5))
+
+@keyframes cssload-spin {
+	100%{ transform: rotate(360deg); }
+}
 .atelier
 	max-width 100%
 	overflow hidden
@@ -1317,6 +1338,176 @@ html
 		text-decoration none
 		&:hover
 			text-decoration underline
+.catalog-product
+	font-size 0
+	margin-bottom 75px
+	&-image
+		display table-cell
+		vertical-align top
+		width 510px
+		line-height 0
+		cursor pointer
+		&-wrapper
+			position relative
+			margin 0 auto
+			width 510px
+			height 640px
+		img
+			position absolute
+			top 0
+			bottom 0
+			border 1px solid #e0e1e6
+			max-width 100%
+			max-height 100%
+	&-gallery
+		display table-cell
+		vertical-align top
+		width 195px
+		padding 0 59px 0 30px
+		&-list
+			padding 55px 0
+	&-thumbnail
+		line-height 0
+		padding 10px 0
+		img
+			width 100%
+			line-height 0
+			border 1px solid #e0e1e6
+			cursor pointer
+			&:hover,
+			&.__active
+				border 1px solid #b7bac8
+				outline 1px solid #b7bac8
+	&-info
+		display table-cell
+		vertical-align top
+		width 475px
+	&-title
+		margin-bottom 15px
+		font-ptserif-bold()
+		font-size 24px
+		color #434a54
+		text-transform uppercase
+	&-tabs
+		margin-bottom 55px
+	&-parameters
+		padding-bottom 5px
+		border-bottom 1px solid #dedede
+		margin-bottom 15px
+	&-option
+		display inline-block
+		vertical-align top
+		margin-right 30px
+		font-size 18px
+		color #89909b
+		text-decoration none
+		cursor pointer
+		&:hover,
+		&.__current
+			color #000
+		&:last-child
+			margin-right 0
+	&-paragraph
+		font-size 16px
+		line-height 26px
+		color #434a54
+		&.__visible
+			display block
+		&.__hidden
+			display none
+	&-form
+		margin-bottom 20px
+	&-select
+		&.form-select
+			.ui-widget
+				min-width 150px
+	&-sizes
+		display block
+		float left
+		clear both
+		margin-bottom 35px
+		font-size 16px
+		color #434a54
+		text-decoration none
+		&:hover
+			text-decoration underline
+	&-basket
+		display block
+		float left
+		clear both
+		font-ptserif-bold()
+		font-size 18px
+		line-height 21px
+		color #000
+		text-transform uppercase
+		text-decoration none
+		text-align center
+		border 1px solid #e0e1e6
+		padding 20px 40px
+		min-width 320px
+		position relative
+		&:hover
+			text-decoration underline
+		&:before
+			content ''
+			display inline-block
+			vertical-align top
+			margin-right 10px
+			sprite(basket-black)
+	@media only screen and (max-width 1200px)
+		&-image
+			width 100%
+			&-wrapper
+				width 100%
+				img
+					left 50%
+					transform translateX(-50%)
+		&-gallery
+			max-width 195px
+			min-width 195px
+			width 100%
+		&-info
+			display block
+			margin 20px auto 0
+			max-width 475px
+			width auto
+	@media only screen and (max-width 1024px)
+		&-image
+			display block
+		&-gallery
+			display block
+			max-width 100%
+			min-width 0
+			width auto
+		&-thumbnail
+			img
+				max-width 100px
+				margin 0 auto
+	@media only screen and (max-width 768px)
+		&-basket
+			float none
+			padding-left 30px
+			padding-right 30px
+			max-width 300px
+			min-width 0
+			margin 0 auto
+		&-select
+			&.form-select
+				.ui-widget
+					min-width 130px
+		&-form
+			.form-item
+				margin-right 10px
+	@media only screen and (max-width 600px)
+		&-image
+			&-wrapper
+				width 100%
+				height 320px
+		&-thumbnail
+			img
+				max-width 60px
+
+
 .catalog
 	&.container
 		padding-bottom 45px
@@ -1672,7 +1863,46 @@ html
 		max-width 800px
 		padding 0 10px
 		margin 0 auto
-		li
+		&-menu
+			display none
+			position absolute
+			top 100%
+			left 0
+			right 0
+			z-index 2
+			padding 50px 0 15px
+			background #fff
+			box-shadow 0 3px 27px 0 rgba(0,0,0,.08)
+			&-list
+				width 915px
+				margin 0 auto
+				font-size 0
+				line-height 0
+				text-align left
+				//&:after
+				//	content ''
+				//	width 100%
+				//	display inline-block
+				//	vertical-align top
+				li
+					display inline-block
+					vertical-align top
+					width 16%
+					margin-right 5%
+					margin-bottom 45px
+					&:nth-child(5n)
+						margin-right 0
+				a
+					text-decoration none
+				img
+					margin-bottom 10px
+				p
+					font-ptserif-bold()
+					font-size 15px
+					color #434a54
+					text-align center
+					line-height 1.2em
+		&>li
 			&:nth-child(1),
 			&:nth-child(2)
 				float left
@@ -1705,22 +1935,30 @@ html
 					height 7px
 					border-radius 50%
 					background #ecf0f5
-		a
-			display block
-			font-size 15px
-			line-height 71px
-			font-weight 700
-			text-transform uppercase
-			text-decoration none
-			&:hover
-				text-decoration underline
+			&>a
+				display block
+				font-size 15px
+				line-height 71px
+				font-weight 700
+				text-transform uppercase
+				text-decoration none
+				&:hover
+					color #878b90
+				//&.__women
+				//	&:hover
+				//		.header-down-menu
+				//			display block
 	&-logo
 		position absolute
 		top 7px
 		left 50%
 		margin-left -50px
 		background #fff
-
+	@media only screen and (max-width 1024px)
+		&-down
+			&-menu
+				&-list
+					width auto
 	@media only screen and (max-width 640px)
 		&-up
 			height 77px
@@ -1755,7 +1993,7 @@ html
 				width 50px
 		&-down
 			column-count 2
-			li
+			&>li
 				margin 0
 				float none !important
 				&:nth-child(3),
@@ -1764,9 +2002,20 @@ html
 						text-align right
 				&:before
 					display none
-			a
-				line-height 1.5em
-				padding 0
+				&>a
+					line-height 1.5em
+					padding 0
+			&-menu
+				&-list
+					li
+						width 30%
+						margin-bottom 30px
+						&:nth-child(5n)
+							margin-right 5%
+						&:nth-child(3n)
+							margin-right 0
+
+
 
 
 
@@ -2533,6 +2782,44 @@ html
 			//border-bottom 1px solid #e0e1e6
 			//border-right 1px solid #e0e1e6
 			//border-left 1px solid #e0e1e6
+.products-list
+	text-align justify
+	padding-bottom 60px
+	border-bottom 1px solid #dedede
+	&:after
+		content ''
+		display inline-block
+		vertical-align top
+		width 100%
+	&-item
+		display inline-block
+		vertical-align top
+		width 32.2%
+		margin-bottom 60px
+		text-decoration none
+	&-image
+		min-height 522px
+		border 1px solid #e0e1e6
+		padding-top 20px
+		line-height 0
+		margin-bottom 20px
+		text-align center
+	&-desc
+		font-size 18px
+		color #434a54
+		text-align center
+	&-price
+		margin-top 15px
+		font-ptserif-bold()
+		font-size 18px
+		color #000
+		text-align center
+	@media only screen and (max-width 1200px)
+		&-item
+			width 49%
+	@media only screen and (max-width 768px)
+		&-item
+			width 100%
 .promo-slider
 	position relative
 	margin-bottom 48px
@@ -2622,3 +2909,66 @@ html
 				sprite(val)
 			&:hover
 				opacity .5
+.title
+	text-align center
+	position relative
+	margin-bottom 35px
+	&:before
+		content ''
+		position absolute
+		top 50%
+		left 0
+		right 0
+		background #d9dbdd
+		height 1px
+	h2
+		display inline-block
+		vertical-align top
+		padding 0 25px
+		font-ptserif-bold()
+		font-size 24px
+		line-height 1.2em
+		color #010101
+		text-transform uppercase
+		background #fff
+		position relative
+		&:before,
+		&:after
+			content ''
+			position absolute
+			top 0
+			bottom 0
+			width 100px
+			background #fff
+		&:before
+			left -100px
+			background linear-gradient(to left, #fff, transparent)
+		&:after
+			right -100px
+			background linear-gradient(to right, #fff, transparent)
+.slick-prev,
+.slick-next
+	position absolute
+	left 50%
+	margin-left -20px
+	background none
+	border none
+	outline none
+.slick-prev
+	top 0
+	sprite(arrow-top)
+.slick-next
+	bottom 0
+	sprite(arrow-bottom)
+@media only screen and (max-width 1024px)
+	.slick-prev,
+	.slick-next
+		top 50%
+		margin-top -20px
+		margin-left 0
+		transform rotate(-90deg)
+	.slick-prev
+		left -40px
+	.slick-next
+		left auto
+		right -40px
