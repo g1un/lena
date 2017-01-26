@@ -24,4 +24,4 @@ mixin catalog(catalog)
 						+el("item-img")
 							img(src="#{images('example/gallery/catalog-img-' + ((index%6) + 1) + '.jpg')}")
 						p!= val
-			+el("more", "a")(href="#") Показать еще 20
+			a(href="#").btn-more Показать еще 20

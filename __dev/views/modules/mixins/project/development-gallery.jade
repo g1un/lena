@@ -1,0 +1,48 @@
+mixin development-gallery()
+	+namespace("development")
+		+el()
+			+title("Производство")
+			.container
+				+el("header", "header")
+					each val, index in ["Скорняжное дело", "Раскрой"]
+						+el("header-link", "a")(href="#")
+							+el("header-img")
+								img(src="#{images('example/development/development-header-img-' + (index+1) + '.jpg')}")
+							span!= val
+				+el("gallery")
+					//.grid-sizer
+					-
+						var gallery = [
+							{
+								"src": "example/development/development-gallery-img-1.jpg"
+							},
+							{
+								"src": "https://www.youtube.com/embed/BBgghnQF6E4",
+								"width": 355,
+								"height": 304
+							},
+							{
+								"src": "example/development/development-gallery-img-2.jpg"
+							},
+							{
+								"src": "example/development/development-gallery-img-3.jpg"
+							},
+							{
+								"src": "https://www.youtube.com/embed/BBgghnQF6E4",
+								"width": 205,
+								"height": 304
+							},
+							{
+								"src": "example/development/development-gallery-img-4.jpg"
+							},
+							{
+								"src": "example/development/development-gallery-img-5.jpg"
+							}
+						];
+					each val in gallery
+						+el("gallery-item", "a")(href="#")
+							if val.width
+								iframe(src="#{val.src}", width="#{val.width}", height="#{val.height}")
+							else
+								img(src="#{images(val.src)}")
+				a(href="#").btn-more Показать еще 20

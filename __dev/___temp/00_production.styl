@@ -1319,6 +1319,22 @@ html
 			text-decoration underline
 
 
+main
+	.btn-more
+		display block
+		max-width 1180px
+		margin 0 auto
+		border 1px solid #e0e1e6
+		font-size 18px
+		line-height 42px
+		color #7c8189
+		text-decoration none
+		text-align center
+		&:hover
+			text-decoration underline
+			border-bottom 1px solid #e0e1e6
+		@media only screen and (max-width 1200px)
+			margin 0 10px
 .call
 	text-align right
 	&-online
@@ -1622,19 +1638,6 @@ html
 			font-size 18px
 			color #434a54
 			text-align center
-	&-more
-		display block
-		max-width 1180px
-		margin 0 auto
-		border 1px solid #e0e1e6
-		font-size 18px
-		line-height 42px
-		color #7c8189
-		text-decoration none
-		text-align center
-		&:hover
-			text-decoration underline
-			border-bottom 1px solid #e0e1e6
 
 	@media only screen and (max-width 1200px)
 		&-item
@@ -1662,6 +1665,106 @@ html
 		box-shadow 0 0 10px 0 rgba(77,38,0,.25)
 		background #fff
 
+.development
+	&-header
+		margin-bottom 20px
+		font-size 0
+		&-link
+			display inline-block
+			vertical-align top
+			height 304px
+			width 49%
+			line-height 0
+			text-decoration none
+			position relative
+			margin-right 2%
+			overflow: hidden;
+			&:last-child
+				margin-right 0
+			span
+				position absolute
+				top 50%
+				left 50%
+				margin-top -55px
+				margin-left -42%
+				padding 44px 10px
+				width 84%
+				box-sizing border-box
+				background rgba(255,255,255,.9)
+				font-ptserif-bold()
+				font-size 18px
+				line-height 1.2em
+				color #434a54
+				text-transform uppercase
+				text-decoration none
+				text-align center
+				&:before
+					content ''
+					position absolute
+					top 20px
+					bottom 20px
+					left 20px
+					right 20px
+					border 1px solid #dededd
+			&:hover
+				.development-header-img
+					transform scale(1.1) rotate(0.02deg)
+		&-img
+			position absolute
+			top 0
+			right 0
+			bottom 0
+			left 0
+			overflow hidden
+			transition transform .5s
+			img
+				position absolute
+				top 50%
+				left 50%
+				width auto
+				height auto
+				max-height none
+				max-width none
+				min-height 100%
+				min-width 100%
+				transform translate(-50%, -50%)
+				-ms-transform translate(-50%, -50%)
+				-webkit-transform translate(-50%, -50%)
+	&-gallery
+		font-size 0
+		text-align justify
+		text-justify distribute
+		&:after
+			content ''
+			display inline-block
+			width 100%
+		&-item
+			display inline-block
+			vertical-align top
+			max-height 304px
+			max-width 100%
+			margin-bottom 20px
+			overflow hidden
+			&:hover
+				img,
+				iframe
+					transform scale(1.1) rotate(0.02deg)
+			img
+				max-height 100%
+				transition transform .5s
+			iframe
+				height 100%
+				min-height 304px
+				max-width 100%
+				transition transform .5s
+		//.grid-sizer
+		//	width 1px
+	@media only screen and (max-width 768px)
+		&-header
+			&-link
+				width 100%
+				margin-right 0
+				margin-bottom 20px
 .footer
 	margin 0 auto
 	padding 45px 0 50px
@@ -1729,6 +1832,7 @@ html
 			display inline-block
 			vertical-align top
 			width 306px
+			min-height 40px
 			border 1px solid #e6e9ee
 			padding 0 15px
 			margin-right 8px
@@ -1963,6 +2067,9 @@ html
 		&-up
 			height 77px
 			column-count 2
+			&-menu
+				&:after
+					display none
 		&-lang,
 		&-contacts
 		&-basket,
@@ -2946,6 +3053,15 @@ html
 		&:after
 			right -100px
 			background linear-gradient(to right, #fff, transparent)
+	@media only screen and (max-width 767px)
+		h2
+			&:before
+			&:after
+				width 20px
+			&:before
+				left -20px
+			&:after
+				right -20px
 .slick-prev,
 .slick-next
 	position absolute
