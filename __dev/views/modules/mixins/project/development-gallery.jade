@@ -8,7 +8,8 @@ mixin development-gallery()
 						+el("header-link", "a")(href="#")
 							+el("header-img")
 								img(src="#{images('example/development/development-header-img-' + (index+1) + '.jpg')}")
-							span!= val
+							if val
+								span!= val
 				+el("gallery")
 					//.grid-sizer
 					-
@@ -17,9 +18,10 @@ mixin development-gallery()
 								"src": "example/development/development-gallery-img-1.jpg"
 							},
 							{
-								"src": "https://www.youtube.com/embed/BBgghnQF6E4",
-								"width": 355,
-								"height": 304
+								"src": "example/development/development-gallery-img-6.jpg",
+								"video": true
+								//"width": 355,
+								//"height": 304
 							},
 							{
 								"src": "example/development/development-gallery-img-2.jpg"
@@ -28,9 +30,10 @@ mixin development-gallery()
 								"src": "example/development/development-gallery-img-3.jpg"
 							},
 							{
-								"src": "https://www.youtube.com/embed/BBgghnQF6E4",
-								"width": 205,
-								"height": 304
+								"src": "example/development/development-gallery-img-7.jpg",
+								"video": true
+								//"width": 205,
+								//"height": 304
 							},
 							{
 								"src": "example/development/development-gallery-img-4.jpg"
@@ -40,9 +43,12 @@ mixin development-gallery()
 							}
 						];
 					each val in gallery
-						+el("gallery-item", "a")(href="#")
-							if val.width
+						+el("gallery-item", "a")(href="#", class="#{val.video ? '__video' : ''}")
+							img(src="#{images(val.src)}")
+							if !val.video
+								span Название статьи
+							//-if val.width
 								iframe(src="#{val.src}", width="#{val.width}", height="#{val.height}")
-							else
+							//-else
 								img(src="#{images(val.src)}")
 				a(href="#").btn-more Показать еще 20
