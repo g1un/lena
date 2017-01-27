@@ -1213,6 +1213,86 @@ html
 @keyframes cssload-spin {
 	100%{ transform: rotate(360deg); }
 }
+.container
+	margin 0 auto
+	max-width 1200px
+	padding 0 10px
+	&-wrapper
+		box-shadow 0 0 10px 0 rgba(77,38,0,.25)
+		background #fff
+.article
+	border-bottom 1px solid #d9dbdd
+	&-wrapper
+		display table
+		table-layout fixed
+		width 100%
+		padding-bottom 50px
+	&-content
+		display table-cell
+		vertical-align top
+	&-image
+		line-height 0
+		margin-bottom 45px
+		img
+			max-width 100%
+	&-title
+		margin-bottom 30px
+		font-ptserif-bold()
+		font-size 28px
+		color #010000
+		text-transform uppercase
+	&-text
+		font-ptserif-reg()
+		font-size 16px
+		line-height 1.5em
+		color #000
+		p
+			margin 0 0 10px
+		img
+			max-width 100%
+	&-aside
+		display table-cell
+		vertical-align top
+		width 325px
+		padding-left 25px
+		&-title
+			margin-bottom 25px
+			font-ptserif-bold()
+			font-size 18px
+			color #010101
+			text-transform uppercase
+		&-link
+			display block
+			padding-left 15px
+			font-ptserif-reg()
+			font-size 16px
+			line-height 1.5em
+			color #000
+			text-decoration none
+			position relative
+			&:before
+				content ''
+				position absolute
+				top 50%
+				margin-top -1px
+				left 0
+				width 9px
+				height 1px
+				background #d9dbdd
+			&:hover
+				text-decoration underline
+	@media only screen and (max-width 1024px)
+		display block
+		&-content
+			display block
+			margin-bottom 50px
+		&-aside
+			display block
+			max-width 300px
+			margin 0 auto
+			&-title
+				text-align center
+
 .atelier
 	max-width 100%
 	overflow hidden
@@ -1657,13 +1737,6 @@ main
 
 
 
-.container
-	margin 0 auto
-	max-width 1200px
-	padding 0 10px
-	&-wrapper
-		box-shadow 0 0 10px 0 rgba(77,38,0,.25)
-		background #fff
 
 .development
 	&-header
