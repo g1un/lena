@@ -1,0 +1,22 @@
+mixin vacancies(vacancies, desc)
+	+namespace("vacancies")
+		+title("Вакансии")
+		+el().container
+			each val in vacancies
+				+el("item").js-container
+					+el("header").js-btn-toggle
+						+el("name")
+							b #{val.name}
+							span #{val.salaryFrom}
+						+el("options", "ul")
+							li Уровень зарплаты: #[b!= val.salary]
+							li Требуемый опыт работы: #[b!= val.experience]
+							li Город: #[b!= val.city]
+							li E-mail: #[b!= val.email]
+					+el("desc").js-content
+						each el in desc
+							h4!= el.title
+							ul
+								each elem in el.list
+									li!= elem
+						+el("respond", "a")(href="#") Откликнуться на вакансию

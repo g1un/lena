@@ -1719,6 +1719,12 @@ main
 			font-size 18px
 			color #434a54
 			text-align center
+	&-price
+		margin-top 15px
+		font-ptserif-bold()
+		font-size 18px
+		color #000
+		text-align center
 
 	@media only screen and (max-width 1200px)
 		&-item
@@ -3216,3 +3222,96 @@ main
 	.slick-next
 		left auto
 		right -40px
+
+.vacancies
+	&-item
+		margin-bottom 60px
+		color #000
+	&-header
+		border 1px solid #e0e1e6
+		padding 12px 32px 25px 29px
+		margin-bottom 55px
+		cursor pointer
+		&.__opened
+			border-color transparent
+			background #f5f5f5
+			.vacancies-name:after
+				border-top none
+				border-bottom 7px solid #000
+	&-name
+		margin-bottom 45px
+		font-ptserif-bold()
+		font-size 20px
+		text-transform uppercase
+		border-bottom 1px solid #000
+		padding 10px 0
+		position relative
+		&:after
+			content ''
+			position absolute
+			top 50%
+			right 0
+			margin-top -4px
+			width 0
+			height 0
+			border-top 7px solid #000
+			border-left 6px solid transparent
+			border-right 6px solid transparent
+		b
+			font-weight 700
+			display table-cell
+			width 100%
+			padding-right 10px
+		span
+			display table-cell
+			min-width 215px
+	&-options
+		column-count 2
+		column-gap 0
+		li
+			padding-right 10px
+			width 100%
+			margin-bottom 8px
+	&-desc
+		display none
+		font-size 16px
+		&.__show
+			display block
+		h4
+			margin-bottom 15px
+			font-ptserif-bold()
+			text-transform uppercase
+		ul
+			margin-bottom 40px
+			font-ptsans-reg()
+			li
+				margin-bottom 10px
+				padding-left 9px
+				position relative
+				&:before
+					content: '-'
+					position absolute
+					left 0
+	&-respond
+		display block
+		font-ptserif-bold()
+		font-size 18px
+		line-height 1.2em
+		text-transform uppercase
+		text-decoration none
+		text-align center
+		padding 12px 10px
+		border 1px solid #e0e1e6
+		&:hover
+			text-decoration underline
+
+	@media only screen and (max-width 767px)
+		&-name
+			text-align center
+			b
+				display block
+				margin-bottom 10px
+			span
+				display block
+		&-options
+			column-count 1

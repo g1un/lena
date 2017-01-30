@@ -23,5 +23,6 @@ mixin catalog(catalog)
 					+el("item", "a")(href="#")
 						+el("item-img")
 							img(src="#{images('example/gallery/catalog-img-' + ((index%6) + 1) + '.jpg')}")
-						p!= val
+						p!= val.desc
+						+el("price", "p") #{val.price} #[span.rub v]
 			a(href="#").btn-more Показать еще 20

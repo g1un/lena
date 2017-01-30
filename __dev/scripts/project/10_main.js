@@ -201,3 +201,20 @@ App.movableContent = App.run(function(){
 		}
 	}
 });
+
+App.run(function(){
+    App.onClick('.js-btn-toggle', function(e){
+        e.preventDefault();
+        var btn = $(this);
+        var container = btn.closest('.js-container');
+        var content = container.find('.js-content');
+
+        if(!content.hasClass('__show')) {
+        	btn.addClass('__opened');
+            content.addClass('__show');
+        } else {
+            btn.removeClass('__opened');
+            content.removeClass('__show');
+        }
+    });
+});
