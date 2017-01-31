@@ -1,0 +1,18 @@
+mixin contacts(shops)
+	+namespace("contacts")
+		+title("Контакты")
+		+el("")
+			.container
+				each val, index in shops
+					+el("shop")
+						+el("shop-image")
+							img(src="#{images('example/contacts-shop-img-' + index + '.jpg')}")
+						+el("shop-title")!= val.title
+						+el("shop-info", "ul")
+							li Адрес: #[span!= val.address]
+							li Телефон: #[span!= val.tel]
+							li Время работы: #[span!= val.schedule]
+							li E-mail: #[span!= val.email]
+						+el("shop-map").js-container
+							h4.js-btn-toggle Показать на карте
+							+el("map")(id="contacts-shop-map-#{index}").js-map.js-content

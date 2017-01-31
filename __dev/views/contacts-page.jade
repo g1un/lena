@@ -1,0 +1,7 @@
+extends layouts/_default
+
+block vars
+	-var currentPageTitle = ["Контакты"]
+block content
+	+breadcrumbs(["Главная", "Контакты"])
+	+contacts(shops)
