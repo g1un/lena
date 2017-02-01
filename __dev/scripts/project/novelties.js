@@ -1,5 +1,6 @@
 App.run(function(){
     $(document).ready(function() {
+        if(!$('.js-parallax-1').length) return;
 
         var tweenDestroyed = true;
 
