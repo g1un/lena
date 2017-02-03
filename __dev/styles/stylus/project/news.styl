@@ -53,28 +53,44 @@
 		display inline-block
 		vertical-align middle
 		width 32.2%
-		height 293px
+		//max-height 293px
+		//padding-top 25.61404%
+		padding-top 292px
 		position relative
 		font-size 0
 		line-height 0
 		text-align center
 		overflow hidden
 		&:hover
-			img
+			.news-products-image
 				transform scale(1.1) rotate(0.02deg)
-		&:before
-			content ''
-			display inline-block
-			vertical-align middle
-			height 100%
-		img
-			display inline-block
-			vertical-align middle
-			max-width 100%
-			max-height 100%
+			//img
+			//	transform scale(1.1) rotate(0.02deg)
+		//&:before
+		//	content ''
+		//	display inline-block
+		//	vertical-align middle
+		//	height 100%
+		&-image
+			position absolute
+			top 0
+			left 0
+			right 0
+			bottom 0
+			background-size cover
+			background-repeat no-repeat
+			background-position center center
 			backface-visibility hidden
 			transform translateZ(0) scale(1.0, 1.0)
 			transition transform .5s
+		//img
+		//	display inline-block
+		//	vertical-align middle
+		//	max-width 100%
+		//	max-height 100%
+		//	backface-visibility hidden
+		//	transform translateZ(0) scale(1.0, 1.0)
+		//	transition transform .5s
 		.news-title
 			&:hover
 				text-decoration none
@@ -83,9 +99,9 @@
 		top 50%
 		left 50%
 		//transform translateY(-50%) translateX(-50%)
-		margin-top -55px
+		transform translateY(-50%)
 		margin-left -42%
-		padding 44px 10px
+		padding 44px 25px
 		width 84%
 		box-sizing border-box
 		background rgba(255,255,255,.9)
@@ -113,7 +129,7 @@
 
 	@media only screen and (max-width 640px)
 		height auto
-		margin-bottom 10px
+		margin-bottom 50px
 		&-link,
 		&-item,
 		&-products

@@ -2,7 +2,8 @@ mixin product(product)
 	.container
 		.product
 			a(href="#").product-category
-				img(src="#{ images('example/' + product.categoryImage + '.jpg') }", alt="#{product.categoryImage}")
+				.product-category-image(style="background-image: url(#{images('example/' + product.categoryImage + '.jpg')})")
+				//-img(src="#{ images('example/' + product.categoryImage + '.jpg') }", alt="#{product.categoryImage}")
 				div.product-category-link
 					span!= product.category
 			a(href="#").product-info

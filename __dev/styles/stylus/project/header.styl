@@ -1,5 +1,5 @@
 .header
-	position relative
+	//position relative
 	&-up
 		border-bottom 1px solid #f0f1f1
 		padding 16px 0
@@ -19,7 +19,6 @@
 		float left
 		margin-right 40px
 		cursor pointer
-		position relative
 		.ui-selectmenu-button
 			border none
 			background transparent
@@ -97,6 +96,8 @@
 				color #fff
 				font-weight 700
 				text-align center
+	&-wrapper
+		position relative
 	&-down
 		max-width 800px
 		padding 0 10px
@@ -104,7 +105,7 @@
 		&-menu
 			display none
 			position absolute
-			top 100%
+			//top 100%
 			left 0
 			right 0
 			z-index 2
@@ -199,7 +200,9 @@
 					width auto
 	@media only screen and (max-width 640px)
 		&-up
-			height 77px
+			margin-bottom 10px
+			padding-bottom 0
+			height 81px
 			column-count 2
 			&-menu
 				&:after
@@ -208,11 +211,12 @@
 		&-contacts
 		&-basket,
 		&-mail
+			margin-bottom 10px
 			float none
 			padding 0
 		&-lang
 			height 22px
-			margin 0
+			margin 0 0 10px
 			.ui-selectmenu-button span.ui-selectmenu-text
 				text-align left
 		&-basket
@@ -235,7 +239,7 @@
 		&-down
 			column-count 2
 			&>li
-				margin 0
+				margin 0 0 10px
 				float none !important
 				&:nth-child(3),
 				&:nth-child(4)

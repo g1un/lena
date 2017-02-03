@@ -3,17 +3,23 @@ mixin development-gallery()
 		+el()
 			+title("Производство")
 			.container
-				+el("header", "header")
-					each val, index in ["Скорняжное дело", "Раскрой"]
-						+el("header-link", "a")(href="#")
-							+el("header-img")
-								img(src="#{images('example/development/development-header-img-' + (index+1) + '.jpg')}")
-							if val
-								span!= val
+				//+el("header", "header")
+				//	each val, index in ["Скорняжное дело", "Раскрой"]
+				//		+el("header-link", "a")(href="#")
+				//			+el("header-img")
+				//				img(src="#{images('example/development/development-header-img-' + (index+1) + '.jpg')}")
+				//			if val
+				//				span!= val
 				+el("gallery")
 					//.grid-sizer
 					-
 						var gallery = [
+							{
+								"src": "example/development/development-header-img-1.jpg"
+							},
+							{
+								"src": "example/development/development-header-img-2.jpg"
+							},
 							{
 								"src": "example/development/development-gallery-img-1.jpg"
 							},

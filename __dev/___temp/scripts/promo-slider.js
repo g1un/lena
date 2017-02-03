@@ -19,9 +19,11 @@
 
             $el.slick(options);
 
+            var slickDots = $('.slick-dots');
+            slickDots.addClass('__slide-0');
+
             $el.on('beforeChange', function(event, slick, currentSlide, nextSlide){
-                var slickDots = $('.slick-dots');
-                slickDots[0].className = slickDots[0].className.replace(/\b__slide-.*/g, '');
+                slickDots[0].className = slickDots[0].className.replace(/ __slide-.*/g, '');
                 slickDots.addClass('__slide-' + nextSlide);
             });
 
@@ -29,11 +31,10 @@
 
             dot.on('mouseover', function() {
                 var slideNum = $('.promo-slider-dot').index(this);
-                console.log(slideNum);
                 $el.slick('slickGoTo', slideNum);
                 $el.slick('pause');
                 var slickDots = $('.slick-dots');
-                slickDots[0].className = slickDots[0].className.replace(/\b__slide-.*/g, '');
+                slickDots[0].className = slickDots[0].className.replace(/ __slide-.*/g, '');
                 slickDots.addClass('__slide-' + slideNum);
             });
 

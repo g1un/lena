@@ -10,5 +10,6 @@ mixin news(news)
 					p!= news.text
 					a(href="#").news-item-link Подробнее
 			a(href="#").news-products
-				img(src="#{ images('example/' + news.image + '.jpg') }", alt="#{news.image}")
+				.news-products-image(style="background-image: url(#{images('example/' + news.image + '.jpg')})")
+				//-img(src="#{ images('example/' + news.image + '.jpg') }", alt="#{news.image}")
 				.news-title Новая продукция

@@ -1812,74 +1812,74 @@ main
 				column-count 1
 
 .development
-	&-header
-		margin-bottom 20px
-		font-size 0
-		&-link
-			display inline-block
-			vertical-align top
-			height 304px
-			width 49%
-			line-height 0
-			text-decoration none
-			position relative
-			margin-right 2%
-			overflow: hidden;
-			&:last-child
-				margin-right 0
-			span
-				opacity 0
-				transition opacity .5s
-				position absolute
-				top 50%
-				left 50%
-				margin-top -55px
-				margin-left -42%
-				padding 44px 10px
-				width 84%
-				box-sizing border-box
-				background rgba(255,255,255,.9)
-				font-ptserif-bold()
-				font-size 18px
-				line-height 1.2em
-				color #434a54
-				text-transform uppercase
-				text-decoration none
-				text-align center
-				&:before
-					content ''
-					position absolute
-					top 20px
-					bottom 20px
-					left 20px
-					right 20px
-					border 1px solid #dededd
-			&:hover
-				.development-header-img
-					transform scale(1.1) rotate(0.02deg)
-				span
-					opacity 1
-		&-img
-			position absolute
-			top 0
-			right 0
-			bottom 0
-			left 0
-			overflow hidden
-			transition transform .5s
-			img
-				position absolute
-				top 50%
-				left 50%
-				width auto
-				height auto
-				max-height none
-				max-width none
-				min-height 100%
-				min-width 100%
-				transform translate(-50%, -50%)
-				-ms-transform translate(-50%, -50%)
-				-webkit-transform translate(-50%, -50%)
+	//&-header
+	//	margin-bottom 20px
+	//	font-size 0
+	//	&-link
+	//		display inline-block
+	//		vertical-align top
+	//		height 304px
+	//		width 49%
+	//		line-height 0
+	//		text-decoration none
+	//		position relative
+	//		margin-right 2%
+	//		overflow: hidden;
+	//		&:last-child
+	//			margin-right 0
+	//		span
+	//			opacity 0
+	//			transition opacity .5s
+	//			position absolute
+	//			top 50%
+	//			left 50%
+	//			margin-top -55px
+	//			margin-left -42%
+	//			padding 44px 10px
+	//			width 84%
+	//			box-sizing border-box
+	//			background rgba(255,255,255,.9)
+	//			font-ptserif-bold()
+	//			font-size 18px
+	//			line-height 1.2em
+	//			color #434a54
+	//			text-transform uppercase
+	//			text-decoration none
+	//			text-align center
+	//			&:before
+	//				content ''
+	//				position absolute
+	//				top 20px
+	//				bottom 20px
+	//				left 20px
+	//				right 20px
+	//				border 1px solid #dededd
+	//		&:hover
+	//			.development-header-img
+	//				transform scale(1.1) rotate(0.02deg)
+	//			span
+	//				opacity 1
+	//	&-img
+	//		position absolute
+	//		top 0
+	//		right 0
+	//		bottom 0
+	//		left 0
+	//		overflow hidden
+	//		transition transform .5s
+	//		img
+	//			position absolute
+	//			top 50%
+	//			left 50%
+	//			width auto
+	//			height auto
+	//			max-height none
+	//			max-width none
+	//			min-height 100%
+	//			min-width 100%
+	//			transform translate(-50%, -50%)
+	//			-ms-transform translate(-50%, -50%)
+	//			-webkit-transform translate(-50%, -50%)
 	&-gallery
 		font-size 0
 		text-align justify
@@ -1892,8 +1892,9 @@ main
 			display inline-block
 			vertical-align top
 			max-height 304px
-			max-width 100%
+			max-width 49.15254%
 			margin-bottom 20px
+			line-height 0
 			overflow hidden
 			position relative
 			&:hover
@@ -1923,7 +1924,8 @@ main
 					sprite(play)
 					z-index 1
 			img
-				max-height 100%
+				min-height 100%
+				min-width 100%
 				transition transform .5s
 			//iframe
 			//	height 100%
@@ -1965,6 +1967,9 @@ main
 				width 100%
 				margin-right 0
 				margin-bottom 20px
+		&-gallery
+			&-item
+				max-width 100%
 .footer
 	margin 0 auto
 	padding 45px 0 50px
@@ -2065,7 +2070,7 @@ main
 		&-title
 			margin-bottom 10px
 .header
-	position relative
+	//position relative
 	&-up
 		border-bottom 1px solid #f0f1f1
 		padding 16px 0
@@ -2085,7 +2090,6 @@ main
 		float left
 		margin-right 40px
 		cursor pointer
-		position relative
 		.ui-selectmenu-button
 			border none
 			background transparent
@@ -2163,6 +2167,8 @@ main
 				color #fff
 				font-weight 700
 				text-align center
+	&-wrapper
+		position relative
 	&-down
 		max-width 800px
 		padding 0 10px
@@ -2170,7 +2176,7 @@ main
 		&-menu
 			display none
 			position absolute
-			top 100%
+			//top 100%
 			left 0
 			right 0
 			z-index 2
@@ -2265,7 +2271,9 @@ main
 					width auto
 	@media only screen and (max-width 640px)
 		&-up
-			height 77px
+			margin-bottom 10px
+			padding-bottom 0
+			height 81px
 			column-count 2
 			&-menu
 				&:after
@@ -2274,11 +2282,12 @@ main
 		&-contacts
 		&-basket,
 		&-mail
+			margin-bottom 10px
 			float none
 			padding 0
 		&-lang
 			height 22px
-			margin 0
+			margin 0 0 10px
 			.ui-selectmenu-button span.ui-selectmenu-text
 				text-align left
 		&-basket
@@ -2301,7 +2310,7 @@ main
 		&-down
 			column-count 2
 			&>li
-				margin 0
+				margin 0 0 10px
 				float none !important
 				&:nth-child(3),
 				&:nth-child(4)
@@ -2488,6 +2497,7 @@ main
 .main-features
 	font-size 0
 	margin-bottom 20px
+	overflow hidden
 	&-item
 		display inline-block
 		vertical-align top
@@ -2652,28 +2662,44 @@ main
 		display inline-block
 		vertical-align middle
 		width 32.2%
-		height 293px
+		//max-height 293px
+		//padding-top 25.61404%
+		padding-top 292px
 		position relative
 		font-size 0
 		line-height 0
 		text-align center
 		overflow hidden
 		&:hover
-			img
+			.news-products-image
 				transform scale(1.1) rotate(0.02deg)
-		&:before
-			content ''
-			display inline-block
-			vertical-align middle
-			height 100%
-		img
-			display inline-block
-			vertical-align middle
-			max-width 100%
-			max-height 100%
+			//img
+			//	transform scale(1.1) rotate(0.02deg)
+		//&:before
+		//	content ''
+		//	display inline-block
+		//	vertical-align middle
+		//	height 100%
+		&-image
+			position absolute
+			top 0
+			left 0
+			right 0
+			bottom 0
+			background-size cover
+			background-repeat no-repeat
+			background-position center center
 			backface-visibility hidden
 			transform translateZ(0) scale(1.0, 1.0)
 			transition transform .5s
+		//img
+		//	display inline-block
+		//	vertical-align middle
+		//	max-width 100%
+		//	max-height 100%
+		//	backface-visibility hidden
+		//	transform translateZ(0) scale(1.0, 1.0)
+		//	transition transform .5s
 		.news-title
 			&:hover
 				text-decoration none
@@ -2682,9 +2708,9 @@ main
 		top 50%
 		left 50%
 		//transform translateY(-50%) translateX(-50%)
-		margin-top -55px
+		transform translateY(-50%)
 		margin-left -42%
-		padding 44px 10px
+		padding 44px 25px
 		width 84%
 		box-sizing border-box
 		background rgba(255,255,255,.9)
@@ -2712,7 +2738,7 @@ main
 
 	@media only screen and (max-width 640px)
 		height auto
-		margin-bottom 10px
+		margin-bottom 50px
 		&-link,
 		&-item,
 		&-products
@@ -2724,14 +2750,14 @@ main
 		text-align center
 		position relative
 		//margin-bottom 85px
-		&:before
-			content ''
-			position absolute
-			top 50%
-			left 0
-			right 0
-			background #929292
-			height 1px
+		//&:before
+		//	content ''
+		//	position absolute
+		//	top 50%
+		//	left 0
+		//	right 0
+		//	background #929292
+		//	height 1px
 		h3
 			display inline-block
 			vertical-align top
@@ -2751,12 +2777,24 @@ main
 				bottom 0
 				width 100px
 				background #fff
+			//&:before
+			//	left -100px
+			//	background linear-gradient(to left, #fff, transparent)
+			//&:after
+			//	right -100px
+			//	background linear-gradient(to right, #fff, transparent)
 			&:before
-				left -100px
-				background linear-gradient(to left, #fff, transparent)
+				top 50%
+				right 100%
+				width 9999px
+				height 1px
+				background linear-gradient(to left, transparent, #929292 100px)
 			&:after
-				right -100px
-				background linear-gradient(to right, #fff, transparent)
+				top 50%
+				left 100%
+				width 9999px
+				height 1px
+				background linear-gradient(to right, transparent, #929292 100px)
 	&-list
 		max-width 1600px
 		margin 0 auto
@@ -2912,6 +2950,7 @@ main
 			.image-1,
 			.image-2
 				display none
+				transform none !important
 			.post-0,
 			.post-1,
 			.post-2,
@@ -2920,6 +2959,7 @@ main
 				margin 15px
 				width auto
 				white-space normal
+				transform none !important
 				.novelties
 					&-post
 						&-image
@@ -2938,35 +2978,50 @@ main
 	&-category
 		display inline-block
 		vertical-align middle
-		margin -1px 0 -1px -1px
+		//margin -1px 0 0 -1px
 		width 32.2%
-		height 293px
-		border-top 1px solid #e0e1e6
-		border-bottom 1px solid #e0e1e6
-		border-left 1px solid #e0e1e6
+		//height 293px
+		padding-top 293px
+		//border-top 1px solid #e0e1e6
+		//border-bottom 1px solid #e0e1e6
+		//border-left 1px solid #e0e1e6
 		position relative
 		font-size 0
 		line-height 0
 		text-align center
 		overflow hidden
 		&:hover
-			img
+			.product-category-image
 				transform scale(1.1) rotate(0.02deg)
+			//img
+			//	transform scale(1.1) rotate(0.02deg)
 		&:before
 			content ''
 			display inline-block
 			vertical-align middle
 			height 100%
-		img
-			display inline-block
-			vertical-align middle
-			max-width 100%
-			max-height 100%
-			margin -1px 0 -1px -1px
-			position relative
+		&-image
+			position absolute
+			top 0
+			left 0
+			right 0
+			bottom 0
+			background-size cover
+			background-repeat no-repeat
+			background-position center center
 			backface-visibility hidden
 			transform translateZ(0) scale(1.0, 1.0)
 			transition transform .5s
+		//img
+		//	display inline-block
+		//	vertical-align middle
+		//	max-width 100%
+		//	max-height 100%
+		//	margin -1px 0 -1px -1px
+		//	position relative
+		//	backface-visibility hidden
+		//	transform translateZ(0) scale(1.0, 1.0)
+		//	transition transform .5s
 		&-link
 			position absolute
 			top 50%
@@ -2974,7 +3029,7 @@ main
 			//transform translateY(-50%) translateX(-50%)
 			margin-top -55px
 			margin-left -42%
-			padding 44px 10px
+			padding 44px 25px
 			width 84%
 			box-sizing border-box
 			background rgba(255,255,255,.9)
@@ -3003,7 +3058,9 @@ main
 		padding-left 22px
 		border-top 1px solid #e0e1e6
 		border-bottom 1px solid #e0e1e6
+		border-right 1px solid #e0e1e6
 		position relative
+		text-decoration none
 		font-size 0
 		&:hover
 			border-bottom 1px solid #e0e1e6 !important
@@ -3063,8 +3120,8 @@ main
 		height auto
 		&-category
 			width 100%
-			margin 0 0 22px
-			padding 0
+			//margin 0 0 22px
+			//padding 0
 			border-top 1px solid #e0e1e6
 			border-bottom none
 			border-right 1px solid #e0e1e6
@@ -3072,16 +3129,20 @@ main
 			text-align center
 			&:before
 				display none
-			img
-				vertical-align top
+			//img
+			//	vertical-align top
 		&-info
 			width 100%
 			margin 0
+			padding-top 22px
 			border-top none
 			border-bottom 1px solid #e0e1e6
 			border-right 1px solid #e0e1e6
 			border-left 1px solid #e0e1e6
 			height auto
+			&-wrapper
+				height 293px
+				display table-cell
 		&-image
 			width 100%
 			padding 0
@@ -3220,14 +3281,16 @@ main
 	text-align center
 	position relative
 	margin-bottom 35px
-	&:before
-		content ''
-		position absolute
-		top 50%
-		left 0
-		right 0
-		background #d9dbdd
-		height 1px
+	max-width 100%
+	overflow hidden
+	//&:before
+	//	content ''
+	//	position absolute
+	//	top 50%
+	//	left 0
+	//	right 0
+	//	background #d9dbdd
+	//	height 1px
 	h2
 		display inline-block
 		vertical-align top
@@ -3247,21 +3310,33 @@ main
 			bottom 0
 			width 100px
 			background #fff
+		//&:before
+		//	left -100px
+		//	background linear-gradient(to left, #fff, transparent)
+		//&:after
+		//	right -100px
+		//	background linear-gradient(to right, #fff, transparent)
 		&:before
-			left -100px
-			background linear-gradient(to left, #fff, transparent)
+			top 50%
+			right 100%
+			width 9999px
+			height 1px
+			background linear-gradient(to left, transparent, #d9dbdd 100px)
 		&:after
-			right -100px
-			background linear-gradient(to right, #fff, transparent)
-	@media only screen and (max-width 767px)
-		h2
-			&:before
-			&:after
-				width 20px
-			&:before
-				left -20px
-			&:after
-				right -20px
+			top 50%
+			left 100%
+			width 9999px
+			height 1px
+			background linear-gradient(to right, transparent, #d9dbdd 100px)
+	//@media only screen and (max-width 767px)
+		//h2
+		//	&:before
+		//	&:after
+		//		//width 20px
+		//	&:before
+		//		left -20px
+		//	&:after
+		//		right -20px
 .slick-prev,
 .slick-next
 	position absolute

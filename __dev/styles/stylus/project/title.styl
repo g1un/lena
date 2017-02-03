@@ -2,14 +2,16 @@
 	text-align center
 	position relative
 	margin-bottom 35px
-	&:before
-		content ''
-		position absolute
-		top 50%
-		left 0
-		right 0
-		background #d9dbdd
-		height 1px
+	max-width 100%
+	overflow hidden
+	//&:before
+	//	content ''
+	//	position absolute
+	//	top 50%
+	//	left 0
+	//	right 0
+	//	background #d9dbdd
+	//	height 1px
 	h2
 		display inline-block
 		vertical-align top
@@ -29,18 +31,30 @@
 			bottom 0
 			width 100px
 			background #fff
+		//&:before
+		//	left -100px
+		//	background linear-gradient(to left, #fff, transparent)
+		//&:after
+		//	right -100px
+		//	background linear-gradient(to right, #fff, transparent)
 		&:before
-			left -100px
-			background linear-gradient(to left, #fff, transparent)
+			top 50%
+			right 100%
+			width 9999px
+			height 1px
+			background linear-gradient(to left, transparent, #d9dbdd 100px)
 		&:after
-			right -100px
-			background linear-gradient(to right, #fff, transparent)
-	@media only screen and (max-width 767px)
-		h2
-			&:before
-			&:after
-				width 20px
-			&:before
-				left -20px
-			&:after
-				right -20px
+			top 50%
+			left 100%
+			width 9999px
+			height 1px
+			background linear-gradient(to right, transparent, #d9dbdd 100px)
+	//@media only screen and (max-width 767px)
+		//h2
+		//	&:before
+		//	&:after
+		//		//width 20px
+		//	&:before
+		//		left -20px
+		//	&:after
+		//		right -20px

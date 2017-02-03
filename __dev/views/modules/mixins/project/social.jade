@@ -4,4 +4,4 @@ mixin social()
 			+el("list", "ul")
 				each val in ["vk", "fb", "twitter", "google", "ok"]
 					+el("item", "li")
-						+el("link", "a")(href="#", target="_blank").social-link(class="__#{val}")
+						+el("link", "a")(href="#", target="_blank", class="social-link __#{val}")

@@ -5,14 +5,14 @@
 		text-align center
 		position relative
 		//margin-bottom 85px
-		&:before
-			content ''
-			position absolute
-			top 50%
-			left 0
-			right 0
-			background #929292
-			height 1px
+		//&:before
+		//	content ''
+		//	position absolute
+		//	top 50%
+		//	left 0
+		//	right 0
+		//	background #929292
+		//	height 1px
 		h3
 			display inline-block
 			vertical-align top
@@ -32,12 +32,24 @@
 				bottom 0
 				width 100px
 				background #fff
+			//&:before
+			//	left -100px
+			//	background linear-gradient(to left, #fff, transparent)
+			//&:after
+			//	right -100px
+			//	background linear-gradient(to right, #fff, transparent)
 			&:before
-				left -100px
-				background linear-gradient(to left, #fff, transparent)
+				top 50%
+				right 100%
+				width 9999px
+				height 1px
+				background linear-gradient(to left, transparent, #929292 100px)
 			&:after
-				right -100px
-				background linear-gradient(to right, #fff, transparent)
+				top 50%
+				left 100%
+				width 9999px
+				height 1px
+				background linear-gradient(to right, transparent, #929292 100px)
 	&-list
 		max-width 1600px
 		margin 0 auto
@@ -193,6 +205,7 @@
 			.image-1,
 			.image-2
 				display none
+				transform none !important
 			.post-0,
 			.post-1,
 			.post-2,
@@ -201,6 +214,7 @@
 				margin 15px
 				width auto
 				white-space normal
+				transform none !important
 				.novelties
 					&-post
 						&-image

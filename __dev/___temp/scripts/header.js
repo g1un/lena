@@ -14,6 +14,21 @@ App.run(function() {
                     womenMenu.stop().fadeOut('300');
                 }
             );
+
+            womenBtn.on('touchend', function(e) {
+                e.preventDefault();
+                var touched = $(e.target);
+                if(!touched.closest('.js-header-women-menu').length) {
+                    womenMenu.fadeToggle('300');
+                }
+            });
+
+            $('html').on('touchstart', function(e) {
+                var touched = $(e.target);
+                if(!touched.closest(('.js-header-women-btn')).length) {
+                    womenMenu.fadeOut('300');
+                }
+            });
         }
     });
 });
