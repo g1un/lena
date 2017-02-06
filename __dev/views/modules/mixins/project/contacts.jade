@@ -13,6 +13,6 @@ mixin contacts(shops)
 							li Телефон: #[span!= val.tel]
 							li Время работы: #[span!= val.schedule]
 							li E-mail: #[span!= val.email]
-						+el("shop-map").js-container
-							h4.js-btn-toggle Показать на карте
+						+el("shop-map").js-container.js-map-container
+							h4.js-btn-toggle.js-btn-map Показать на карте
 							+el("map")(id="contacts-shop-map-#{index}").js-map.js-content

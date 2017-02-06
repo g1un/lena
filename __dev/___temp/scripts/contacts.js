@@ -9,6 +9,8 @@ $(document).ready(function() {
 
         var mapsArr = [];
         var myGeoObject = [];
+        // var mapContainer = [];
+        // var mapBtn = [];
 
         maps.each(function(id) {
             mapsArr[id] = new ymaps.Map("contacts-shop-map-"+id, {
@@ -30,6 +32,13 @@ $(document).ready(function() {
             });
 
             mapsArr[id].geoObjects.add(myGeoObject[id]);
+
+            var mapBtn = $("#contacts-shop-map-"+id).closest('.js-map-container').find('.js-btn-map');
+            mapBtn.on('click', function () {
+                setTimeout(function() {
+                    mapsArr[id].container.fitToViewport();
+                }, 1);
+            });
         });
     }
 });
