@@ -165,6 +165,10 @@ App.gui.add({
             $newImage.one('load', function(){
                 $bigImage.removeClass('__loading');
                 $(this).fadeIn(300);
+                $oldImages.css({
+                    'position': 'absolute',
+                    'z-index': '-1'
+                });
                 $oldImages.fadeOut(300, function(){
                     $(this).remove();
                 });
