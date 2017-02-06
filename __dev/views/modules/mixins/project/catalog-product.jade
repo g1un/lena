@@ -4,7 +4,7 @@ mixin catalog-product()
 			+title("Сумки")
 			.container
 				+el("image")
-					+el("image-wrapper").js-product-gallery-image
+					+el("image-wrapper")(href="#{images('example/bag.jpg')}").js-product-gallery-image
 						img(src="#{images('example/bag.jpg')}", alt="bag")
 				+el("gallery").js-product-gallery
 					+el("gallery-list").js-product-gallery-list

@@ -72,7 +72,7 @@ App.gui.add({
             infinite: false,
             responsive: [
                 {
-                    breakpoint: 1025,
+                    breakpoint: 601,
                     settings: {
                         vertical: false,
                         verticalSwiping: false,

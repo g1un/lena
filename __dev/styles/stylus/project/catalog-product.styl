@@ -8,17 +8,20 @@
 		line-height 0
 		cursor pointer
 		&-wrapper
-			position relative
-			margin 0 auto
-			width 510px
-			height 640px
-		img
-			position absolute
-			top 0
-			bottom 0
+			//position relative
+			//margin 0 auto
+			//width 510px
+			//height 640px
 			border 1px solid #e0e1e6
-			max-width 100%
-			max-height 100%
+			box-sizing border-box
+		img
+			//position absolute
+			//top 0
+			//bottom 0
+			//border 1px solid #e0e1e6
+			//max-width 100%
+			width 100%
+			//max-height 100%
 	&-gallery
 		display table-cell
 		vertical-align top
@@ -114,41 +117,41 @@
 			vertical-align top
 			margin-right 10px
 			sprite(basket-black)
-	@media only screen and (max-width 1200px)
-		&-image
-			width 100%
-			&-wrapper
-				width 100%
-				img
-					left 50%
-					transform translateX(-50%)
-		&-gallery
-			max-width 195px
-			min-width 195px
-			width 100%
-		&-info
-			display block
-			margin 20px auto 0
-			max-width 475px
-			width auto
+	.slick-prev,
+	.slick-next
+		position absolute
+		left 50%
+		margin-left -20px
+		background none
+		border none
+		outline none
+	.slick-prev
+		top 0
+		sprite(arrow-top)
+	.slick-next
+		bottom 0
+		sprite(arrow-bottom)
 	@media only screen and (max-width 1024px)
-		&-image
-			display block
-		&-gallery
-			display block
-			max-width 100%
-			min-width 0
+		&-info
+			min-width 260px
 			width auto
-		&-thumbnail
-			img
-				max-width 100px
-				margin 0 auto
+		&-basket
+			padding-left 10px
+			padding-right 10px
+			min-width 0
+			max-width 100%
 	@media only screen and (max-width 768px)
+		&-gallery
+			width 258px
+			padding 0 59px 0 79px
+			&-list
+				margin 0 auto
+		&-info
+			margin-top 20px
+			display block
 		&-basket
 			float none
-			padding-left 30px
-			padding-right 30px
-			max-width 300px
+			width auto
 			min-width 0
 			margin 0 auto
 		&-select
@@ -160,10 +163,31 @@
 				margin-right 10px
 	@media only screen and (max-width 600px)
 		&-image
-			&-wrapper
-				width 100%
-				height 320px
+			display block
+			width 100%
+			max-width 300px
+			margin 0 auto
+		&-gallery
+			display block
+			width 100%
+			padding 0 30px
+			&-list
+				padding 10px 0
 		&-thumbnail
+			text-align center
 			img
+				display inline-block
+				vertical-align top
 				max-width 60px
-
+		.slick-prev,
+		.slick-next
+			top 50%
+			margin-top -20px
+			margin-left 0
+			transform rotate(-90deg)
+			padding 0
+		.slick-prev
+			left -35px
+		.slick-next
+			left auto
+			right -35px
